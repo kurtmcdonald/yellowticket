@@ -10,7 +10,7 @@ puts "Destroying All"
 User.destroy_all
 
 puts "Creating Users..."
-User.create(first_name: "boris", last_name: "johnson", email: "boris@etest.com", password: "password")
+User.create(first_name: "boris", last_name: "johnson", email: "boris@test.com", password: "password")
 User.create(first_name: "tom", last_name: "cruise", email: "tom@test.com", password: "password")
 User.create(first_name: "morgan", last_name: "freeman", email: "morgan@test.com", password: "password")
 
