@@ -1,0 +1,43 @@
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.65)), url("https://images.unsplash.com/photo-1514792368985-f80e9d482a02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+
+.banner img {
+  height: 150px;
+  width: 150px;
+  margin-left: 30px;
+  margin-bottom: 51px;
+}
+
+.hero-text-box {
+  position:  absolute;
+  width: 1140px;
+  top: 35%;
+  left: 15%;
+}
+
+.banner h1,
+  {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: -30px;
+  font-size: 450%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  }
+
+.banner h2 {
+  font-size: 300%;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  color: #fff;
+}
+
