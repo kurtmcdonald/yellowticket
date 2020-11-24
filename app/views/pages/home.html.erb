@@ -1,21 +1,47 @@
-<header>
+<div class="banner">
   <div class="hero-text-box">
     <h1>Yellow Ticket</h1>
     <br>
       <h2>Share More. <br>Waste Less.</h2>
-      <a class="btn btn-full js--scroll-to-plans" href="#">Get Started</a>
+      <%= link_to 'Get Started', stores_path, class: "btn btn-full" %>
       <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
   </div>
-</header>
+</div>
+
+<div class="container">
+<div class="section-steps" id="works">
+    <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+  <div class="row">
+    <div class="col span-1-of-2 steps-box">
+      <%= image_tag("app-iphone.png", class: "app-screen") %>
+
+    </div>
+    <div class="col steps-box">
+      <div class="works-step">
+        <div>1</div>
+        <p>Register your account and start browsing for discounted items in yoru area.</p>
+      </div>
+      <div class="works-step">
+        <div>2</div>
+        <p>Browse your local feed and add items to your basket.</p>
+      </div>
+      <div class="works-step">
+        <div>3</div>
+        <p>Collect your reserved items and pay at the shop.</p>
+      </div>
+
+      <%= image_tag("download-app.svg", class: "app-screen btn-app") %>
+      <%= image_tag("download-app-android.png", class: "app-screen btn-app") %>    </div>
+  </div>
+</div>
+</div>
 
 
 
 
-
-
-
-<div class=>
-  <h3>Our Mission Statement</h3>
+<div class="statement-header">
+<div class="container">
+  <h2>Our Mission Statement</h2>
   <ul class="cards">
   <li class="cards__item">
     <div class="card">
@@ -46,32 +72,4 @@
   </li>
 </ul>
 </div>
-
-<div class="section-steps" id="works">
-  <div class="row">
-    <h2>How it works &mdash; Simple as 1, 2, 3</h2>
-  </div>
-  <div class="row">
-    <div class="col span-1-of-2 steps-box">
-      <%= image_tag("app-iphone.png", class: "app-screen") %>
-
-    </div>
-    <div class="col span-1-of-2 steps-box">
-      <div class="works-step">
-        <div>1</div>
-        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
-      </div>
-      <div class="works-step">
-        <div>2</div>
-        <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
-      </div>
-      <div class="works-step">
-        <div>3</div>
-        <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
-      </div>
-
-      <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
-      <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
-    </div>
-  </div>
 </div>
