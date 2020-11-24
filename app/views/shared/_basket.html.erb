@@ -1,0 +1,44 @@
+<div class="basket-container">
+  <div class="basket-header">
+    <h5><strong>Basket:</strong></h5>
+    <%= link_to "Mark all", clear_orders_path, method: :patch, remote: true %>
+  </div>
+
+  <% sum = 0 %>
+  <% discounted_sum = 0 %>
+
+  <% if @orders.empty? %>
+    <p class="basket-no-items">No items in basket</p>
+  <% else %>
+    <div class="basket-content">
+      <% @orders.each do |order| %>
+        <div class="basket-item">
+          <div><%= order.item.name %> x<%= order.quantity %></div>
+          <div>
+            <span class="old-price">£<%= order.item.price * order.quantity %></span>
+            <i class="fas fa-arrow-right"></i>
+            <span>£<%= order.item.discounted_price * order.quantity %></span>
+          </div>
+        </div>
+        <% sum += order.item.price * order.quantity %>
+        <% discounted_sum += order.item.discounted_price * order.quantity%>
+      <% end %>
+    </div>
+
+    <div class="basket-footer">
+      <div>Total:</div>
+      <div>
+        <span class="old-price">£<%= sum %></span>
+        <i class="fas fa-arrow-right"></i>
+        <span>£<%= discounted_sum %></span>
+      </div>
+    </div>
+
+
+    <%= link_to "Checkout", stores_path, class: "btn btn-secondary basket-checkout" %>
+
+  <% end %>
+
+</div>
+
+

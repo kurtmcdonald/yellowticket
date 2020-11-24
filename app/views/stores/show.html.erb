@@ -1,22 +1,14 @@
-<h1> <%= @store.name %></h1>
-<h3> <%= @store.address %> </h3>
-<p> <%= @store.description %></p>
-<p> owner: <%= @store.user.email %></p>
+<div class="container">
+  <%= render "shared/basket" %>
+  <h1> <%= @store.name %></h1>
+  <h3> <%= @store.address %> </h3>
+  <p> <%= @store.description %></p>
+  <p> owner: <%= @store.user.email %></p>
 
-<p><strong>Items:</strong></p>
-<ul>
-  <% @store.items.each do |item| %>
-    <li><%= item.name %> - £<%= item.price %> - <%= link_to "Add to basket", create_order_path(item.id), method: :post %></li>
-  <% end %>
-</ul>
-
-<p><strong>Basket:</strong></p>
-<ul>
-  <% sum = 0 %>
-  <% @orders.each do |order| %>
-    <li> <%= order.item.name %> - <%= order.item.price %> </li>
-    <% sum += order.item.price %>
-  <% end %>
-  <li> <strong>Total: <%= sum %></strong></li>
-  <li> <%= link_to "Mark all as collected", clear_orders_path, method: :patch %> </li>
-</ul>
+  <p><strong>Items:</strong></p>
+  <ul>
+    <% @store.items.each do |item| %>
+      <li><%= item.name %> - £<%= item.price %> - <%= link_to "Add to basket", create_order_path(item.id), method: :post %></li>
+    <% end %>
+  </ul>
+</div>
