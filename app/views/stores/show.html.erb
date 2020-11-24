@@ -12,8 +12,11 @@
 
 <p><strong>Basket:</strong></p>
 <ul>
+  <% sum = 0 %>
   <% @orders.each do |order| %>
     <li> <%= order.item.name %> - <%= order.item.price %> </li>
+    <% sum += order.item.price %>
   <% end %>
+  <li> <strong>Total: <%= sum %></strong></li>
   <li> <%= link_to "Mark all as collected", clear_orders_path, method: :patch %> </li>
 </ul>
