@@ -32,11 +32,11 @@ img {
 
 .cards__item {
   display: flex;
-  padding: 1rem;
+  padding: 3rem;
   @media(min-width: 40rem) {
     width: 50%;
   }
-  @media(min-width: 56rem) {
+  @media(min-width: 70rem) {
     width: 33.3333%;
   }
 }
@@ -169,3 +169,6 @@ img {
 .btn-app:visited {
   border: 0;
 }
+
+
+
