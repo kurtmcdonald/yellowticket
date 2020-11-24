@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :stores
+  has_many :stores, dependent: :destroy
   has_many :items, through: :orders
-  has_many :orders
+  has_many :orders, dependent: :destroy
 end
