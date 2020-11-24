@@ -6,6 +6,14 @@
 <p><strong>Items:</strong></p>
 <ul>
   <% @store.items.each do |item| %>
-    <li><%= item.name %> - £<%= item.price %></li>
+    <li><%= item.name %> - £<%= item.price %> - <%= link_to "Add to basket", create_order_path(item.id), method: :post %></li>
   <% end %>
+</ul>
+
+<p><strong>Basket:</strong></p>
+<ul>
+  <% @orders.each do |order| %>
+    <li> <%= order.item.name %> - <%= order.item.price %> </li>
+  <% end %>
+  <li> <%= link_to "Mark all as collected", clear_orders_path, method: :patch %> </li>
 </ul>
