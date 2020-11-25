@@ -21,4 +21,9 @@ class OrdersController < ApplicationController
     end
     redirect_back(fallback_location: :stores_path)
   end
+
+  def confirmation
+    @store = Store.find(params[:id])
+    @markers = [{ lat: @store.latitude, lng: @store.longitude}]
+  end
 end
