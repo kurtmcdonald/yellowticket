@@ -19,3 +19,28 @@
   padding: 5px;
   margin: 15px;
 }
+
+// Media Queries for grids
+@media(max-width: 992px) {
+  .show-items-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .show-items-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 576px) {
+  .show-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .show-header {
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
+}

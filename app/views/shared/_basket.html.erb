@@ -26,16 +26,20 @@
     </div>
 
     <div class="basket-footer">
+      <div class="count"><%= @count %></div>
       <div class="basket-total">
         <div class="total">Total:</div>
-        <div>
+        <div class="price">
           <span class="old-price">£<%= sum %></span>
           <i class="fas fa-arrow-right"></i>
           <span>£<%= discounted_sum %></span>
         </div>
+        <div class="price-sm">
+          <span>£<%= discounted_sum %></span>
+        </div>
       </div>
 
-      <%= link_to "Checkout", stores_path, class: "btn btn-secondary basket-checkout" %>
+      <%= link_to "Checkout", stores_path, class: "btn basket-checkout" %>
     </div>
 
 

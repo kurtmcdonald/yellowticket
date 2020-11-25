@@ -24,7 +24,7 @@ Store.create(address: addresses[0], name: Faker::Restaurant.name, description: F
 
 Store.all.each do |store|
   puts "Adding items to store"
-  10.times do
+  20.times do
     puts "Item Added"
     Item.create(store: store, name: Faker::Food.fruits, price: rand(10), discounted_price: rand(5))
   end

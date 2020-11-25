@@ -27,3 +27,28 @@
     font-size: 20px;
   }
 }
+
+// Media Queries for grids
+@media(max-width: 992px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .store-info-container {
+    width: 100%;
+    margin: 0;
+
+    .empty-image {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+
+}
+
+@media(max-width: 576px) {
+
+}

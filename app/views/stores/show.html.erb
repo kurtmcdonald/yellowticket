@@ -17,10 +17,10 @@
             <i class="fas fa-arrow-right"></i>
             <span>£<%= item.discounted_price %></span>
           </div>
-          <div class="text-center">
-            <%= link_to "Add to basket", create_order_path(item.id), method: :post, class: "add-to-basket-btn" %>
-          </div>
         </div>
+          <div class="add-to-basket-btn">
+            <%= link_to "Add to basket", create_order_path(item.id), method: :post %>
+          </div>
       </div>
     <% end %>
   </div>
