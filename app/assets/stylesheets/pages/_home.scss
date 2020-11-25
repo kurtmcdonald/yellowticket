@@ -12,17 +12,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #f0f0f0;
-  font-size: 100%;
-}
-
-img {
-  height: auto;
-  max-width: auto;
-  vertical-align: middle;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -42,12 +31,6 @@ img {
   }
 }
 
-#statement-header {
-  font-size: 200%;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: -10px;
-}
 .card {
   background-color: white;
   border-radius: 0.5rem;
@@ -203,7 +186,6 @@ img {
 }
 
 .statement-header {
-  font-size: 180%;
   margin-top: 40px;
   word-spacing: 2px;
   text-align: center;
@@ -213,6 +195,10 @@ img {
   margin-bottom: -10px;
 }
 
+.statement-header h2 {
+    font-size: 40px;
+    color: black;
+}
 
 .statement-header h2:after {
   display: block;
