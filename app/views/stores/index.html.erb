@@ -15,9 +15,6 @@
   </div>
 </div>
 
-
-
-
 <div>
 <%= render "shared/searchbar" %>
 </div>
@@ -40,11 +37,11 @@
           <s>original price:<%= item.price %></s>
           <br>
           <strong> new price: <%= item.discounted_price %></strong>
-          <button type="button" class="btn btn-warning ml-5"><%= link_to "Add to basket", create_order_path(item.id), method: :post %></button>
+          <button type="button" class="btn btn-warning ml-5"><%= link_to "Add to basket", create_order_path(item.id), method: :post %></button
         </div>
-   </div>
       <% end %>
     </div>
   </div>
   <% end %>
 </div>
+

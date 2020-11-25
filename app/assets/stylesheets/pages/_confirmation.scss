@@ -1,0 +1,26 @@
+.pending {
+  color: orange;
+}
+
+.wait {
+  color: white;
+  font-size: 2rem;
+}
+
+
+.pulsate {
+    -webkit-animation: pulsate 1.2s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}

@@ -7,6 +7,10 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
+    @count = 0
+    @orders.each do |order|
+      @count += order.quantity
+    end
   end
 
   private
