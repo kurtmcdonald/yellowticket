@@ -18,6 +18,7 @@
   height: 40px;
   width: 40px;
   margin-right: 7px;
+  opacity: 0.6;
 }
 
 .footer-links a {
@@ -26,7 +27,7 @@
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .footer-links a:hover {
@@ -34,7 +35,7 @@
 }
 
 .footer .fa-heart {
-  color: #D23333;
+  color: yellow;
 }
 
 .footer-copyright {

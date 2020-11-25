@@ -16,7 +16,6 @@ body {
     height: 65px;
     line-height: 65px;
     text-align: center;
-    background: black;
     justify-content: space-between;
 }
 
@@ -34,7 +33,7 @@ body {
 }
 
 .main_list {
-    height: 65px;
+    height: 55px;
     float: right;
 }
 
@@ -74,7 +73,12 @@ body {
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: black;
+  background: #353B48;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -97,7 +101,11 @@ body {
 }
 }
 
-
+#header-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 35px;
+}
 
 
 
