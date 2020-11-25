@@ -1,47 +1,44 @@
 <div class="container">
-  <h2>Missing something for your meal? See whats on offer below</h2> 
+  <h2>Missing something for your meal? See whats on offer for...</h2> 
   <div class="store-cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
-     <h2 class="suggestion-text">Breakfast</h2>
+     <h3 class="suggestion-text">Breakfast</h3>
     </div>
-
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1543352632-5a4b24e4d2a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80)">
-     <h2 class="suggestion-text">Lunch</h2> 
+     <h3 class="suggestion-text">Lunch</h3> 
     </div>
-
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1579684947550-22e945225d9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80)">
-      <h2 class="suggestion-text">Dinner</h2>
+      <h3 class="suggestion-text">Dinner</h3>
     </div>
   </div>
 </div>
-
 <div>
 <%= render "shared/searchbar" %>
 </div>
-
 <div class="container">
   <h1>All stores near you</h1>
   <% @stores.each do |store| %>
     <div class="store-title">
       <h2> <%= link_to store.name, store_path(store.id) %></h2>
     <p> <%= store.address %> </p></div>
-
   <div class="card-product">
     <div class="store-items">
        <% store.items.each do |item| %>
-
     <div class="card-item">
-      <img class="card-image" src="https://www.buywholefoodsonline.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/o/r/organic_brown_lentils_1kg.jpg" alt="image">
+      <img class="card-image" src="https://images.unsplash.com/photo-1551462147-37885acc36f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="image">
         <div class="store-body">
           <div class="item-name" ><%= item.name %></div>
           <s>original price:<%= item.price %></s>
           <br>
           <strong> new price: <%= item.discounted_price %></strong>
-          <button type="button" class="btn btn-warning ml-5"><%= link_to "Add to basket", create_order_path(item.id), method: :post %></button
+          <button type="button" class="btn btn-warning ml-5"><%= link_to "Add to basket", create_order_path(item.id), method: :post %></button>
         </div>
+   </div>
       <% end %>
     </div>
   </div>
   <% end %>
 </div>
+
+
 
