@@ -14,11 +14,12 @@
 
 html {
   background-color: #f0f0f0;
+  font-size: 100%;
 }
 
 img {
   height: auto;
-  max-width: 100%;
+  max-width: auto;
   vertical-align: middle;
 }
 
@@ -36,14 +37,20 @@ img {
   @media(min-width: 40rem) {
     width: 50%;
   }
-  @media(min-width: 70rem) {
+  @media(min-width: 64rem) {
     width: 33.3333%;
   }
 }
 
+#statement-header {
+  font-size: 200%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -10px;
+}
 .card {
   background-color: white;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
@@ -133,11 +140,12 @@ img {
 }
 
 .app-screen {
-  width: 15%;
+  width: 40%;
 }
 
 .works-step {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .works-step:last-of-type {
@@ -155,10 +163,14 @@ img {
   padding: 5px;
   float: left;
   font-size: 150%;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
-.btn-app img {
+.works-step p {
+  font-size: 90%;
+  line-height: 145%;
+}
+.btn-app {
   height: 50px;
   width: auto;
   margin-right: 10px;
@@ -170,5 +182,44 @@ img {
   border: 0;
 }
 
+.section-steps h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: black;
+  margin-top: 40px;
+}
+
+.section-steps h2:after {
+  display: block;
+  height: 2px;
+  background-color: black;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.statement-header {
+  font-size: 180%;
+  margin-top: 40px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: black;
+  margin-bottom: -10px;
+}
 
 
+.statement-header h2:after {
+  display: block;
+  height: 2px;
+  background-color: black;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
