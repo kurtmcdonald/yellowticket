@@ -1,10 +1,11 @@
+<div>
 <%= render "shared/searchbar" %>
-
+</div>
 
 
   <h1>All stores near you</h1>
 
-
+<div class="container">
   <% @stores.each do |store| %>
     <div class="store-title">
       <h2> <%= link_to store.name, store_path(store.id) %></h2>

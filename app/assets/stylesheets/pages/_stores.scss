@@ -8,7 +8,7 @@
 
 .store-item {
   margin: 10px;
-  background-color: green;
+  background-color: grey;
   width: 350px;
   height: 100px;
   flex-shrink: 0;
@@ -45,4 +45,11 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+h1,
+h2,
+ {
+  color: #353B48 !important;
+  text-transform: none !important;
 }
