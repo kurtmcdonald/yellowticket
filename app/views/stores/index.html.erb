@@ -13,7 +13,10 @@
   <div class="card-product">
     <div class="store-items">
       <% store.items.each do |item| %>
-        <div class="store-item"><%= item.name %> - <%= item.price %></div>
+        <div class="store-item"> <h4><%= item.name %></h4> original price- <%= item.price %>
+          <br>
+        <strong> discount <%= item.discounted_price %></strong>
+        </div>
         <img src="https://www.buywholefoodsonline.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/o/r/organic_brown_lentils_1kg.jpg" alt="image">
       <% end %>
     </div>
