@@ -9,7 +9,8 @@
 input[type=submit] {
   display: inline-block;
   padding: 10px 30px;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 18px;
   text-decoration: none;
   border-radius: 200px;
   transition: 0.2s;
@@ -44,3 +45,13 @@ input[type=submit] {
   background-color: #495365;
 }
 
+.btn-app {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
