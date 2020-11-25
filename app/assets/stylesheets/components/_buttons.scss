@@ -6,7 +6,7 @@
 .btn-full:visited,
 .btn-ghost:link,
 .btn-ghost:visited,
-input[type=submit] {
+{
   display: inline-block;
   padding: 10px 30px;
   font-weight: 400;
@@ -18,7 +18,7 @@ input[type=submit] {
 
 .btn-full:link,
 .btn-full:visited,
-input[type=submit] {
+{
   background-color: #353B48;
   border: 1px solid #353B48;
   color: #FECD1A;
@@ -33,7 +33,7 @@ input[type=submit] {
 
 .btn-full:hover,
 .btn-full:active,
-input[type=submit] {
+{
   border: 1px solid #495365;
   background-color: #495365;
 }
