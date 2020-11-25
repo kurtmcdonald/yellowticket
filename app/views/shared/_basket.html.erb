@@ -1,4 +1,4 @@
-<div class="basket-container">
+<div id="basket" class="basket-container">
   <div class="basket-header">
     <h5><strong>Basket:</strong></h5>
     <%= link_to "Mark all", clear_orders_path, method: :patch, remote: true %>
@@ -26,16 +26,21 @@
     </div>
 
     <div class="basket-footer">
-      <div>Total:</div>
-      <div>
-        <span class="old-price">£<%= sum %></span>
-        <i class="fas fa-arrow-right"></i>
-        <span>£<%= discounted_sum %></span>
+      <div class="count"><%= @count %></div>
+      <div class="basket-total">
+        <div class="total">Total:</div>
+        <div class="price">
+          <span class="old-price">£<%= sum %></span>
+          <i class="fas fa-arrow-right"></i>
+          <span>£<%= discounted_sum %></span>
+        </div>
+        <div class="price-sm">
+          <span>£<%= discounted_sum %></span>
+        </div>
       </div>
+
+      <%= link_to "Checkout", confirmation_store_path, class: "btn basket-checkout" %>
     </div>
-
-
-    <%= link_to "Checkout", stores_path, class: "btn btn-secondary basket-checkout" %>
 
   <% end %>
 

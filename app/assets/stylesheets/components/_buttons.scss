@@ -45,6 +45,32 @@
   background-color: #495365;
 }
 
+.basket-button {
+  margin-left: 100px;
+}
+
+.add-to-basket-btn {
+  padding: 7px 20px;
+  background-color: #495365;
+  border-radius: 0 0 10px 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: white;
+  }
+}
+
+// Add-to-basket-btn media query
+@media(max-width: 576px) {
+  .add-to-basket-btn {
+    height: 100%;
+    width: 100px;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+  }
+
 .btn-app {
   height: 50px;
   width: auto;

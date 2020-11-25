@@ -1,13 +1,16 @@
 class OrdersController < ApplicationController
   def create
-    if Order.exists?({ user: current_user, item: Item.find(params[:item_id]), collected: false })
-      order = Order.where({ user: current_user, item: Item.find(params[:item_id]), collected: false})
+    item = Item.find(params[:item_id])
+    if Order.exists?({ user: current_user, item: item, collected: false })
+      order = Order.where({ user: current_user, item: item, collected: false})
       order.first.quantity += 1
       order.first.save
-      redirect_back(fallback_location: :stores_path)
+      # redirect_back(fallback_location: :stores_path)
+      redirect_to store_path(item.store, anchor: "item-#{item.id}")
     else
       Order.create(user: current_user, item: Item.find(params[:item_id]), quantity: 1)
-      redirect_back(fallback_location: :stores_path)
+      # redirect_back(fallback_location: :stores_path)
+      redirect_to store_path(item.store, anchor: "item-#{item.id}")
     end
   end
 
@@ -17,5 +20,10 @@ class OrdersController < ApplicationController
       order.save
     end
     redirect_back(fallback_location: :stores_path)
+  end
+
+  def confirmation
+    @store = Store.find(params[:id])
+    @markers = [{ lat: @store.latitude, lng: @store.longitude}]
   end
 end
