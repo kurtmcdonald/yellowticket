@@ -4,18 +4,22 @@
 
   <h1>All stores near you</h1>
 
-
+<div class="container">
   <% @stores.each do |store| %>
     <div class="store-title">
       <h2> <%= link_to store.name, store_path(store.id) %></h2>
-    <p> <%= store.address %> </p></div>
+    <p> <%= store.address %> </p>
+  </div>
+
   <div class="card-product">
     <div class="store-items">
       <% store.items.each do |item| %>
+              <img src="https://www.buywholefoodsonline.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/o/r/organic_brown_lentils_1kg.jpg" alt="image">
+
         <div class="store-item"><%= item.name %> - <%= item.price %></div>
-        <img src="https://www.buywholefoodsonline.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/o/r/organic_brown_lentils_1kg.jpg" alt="image">
       <% end %>
     </div>
   </div>
   <% end %>
 </div>
+
