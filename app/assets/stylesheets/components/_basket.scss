@@ -7,7 +7,7 @@
   font-size: 16px;
   position: fixed;
   top: 120px;
-  right: 10vw;
+  right: 180px;
 
   .basket-header {
     display: flex;
@@ -141,23 +141,33 @@
 }
 
 @media(max-width: 992px) {
-  .basket-container-scrolled {
-    display: none;
-  }
 
-  .basket-container {
-    display: none;
-  }
 }
 
 @media(max-width: 768px) {
-  .basket-container {
-    display: none;
-  }
+
 
 }
 
 @media(max-width: 576px) {
+  .basket-container-scrolled {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+
+    .count {
+      border-radius: 0;
+    }
+
+    .basket-checkout {
+      border-radius: 0;
+    }
+  }
+
   .basket-container {
     display: none;
   }
