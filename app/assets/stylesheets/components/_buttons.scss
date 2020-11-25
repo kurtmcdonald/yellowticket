@@ -45,3 +45,13 @@ input[type=submit] {
   background-color: #495365;
 }
 
+.btn-app {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
