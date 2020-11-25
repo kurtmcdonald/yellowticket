@@ -1,0 +1,52 @@
+.basket-container {
+  width: 275px;
+  background-color: white;
+  box-shadow: 15px 15px 10px rgb(227, 227, 227);
+  border-radius: 10px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}
+
+.basket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.basket-content {
+  padding: 0 20px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.basket-footer {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.basket-checkout {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.basket-no-items {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-item: center;
+}

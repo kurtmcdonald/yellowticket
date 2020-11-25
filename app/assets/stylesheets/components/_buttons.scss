@@ -1,0 +1,51 @@
+/*--------------------------------------*/
+/* BUTTONS*/
+/*--------------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  /* Using link to show how buttons look in normal state. if the page has been visited already we want it to look like a new state, so we use :visited*/
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+  background-color: #ff9f43;
+  border: 1px solid #ff9f43;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #ff9f43;
+  color: #ff9f43;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #cb6300;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit] {
+  border: 1px solid #cb6300;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cb6300;
+  color: #fff;
+}
