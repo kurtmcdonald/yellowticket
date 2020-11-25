@@ -5,6 +5,7 @@
   height: 100vh;
   background-attachment: fixed;
   margin-bottom: 0px;
+  margin-top: -19px;
 }
 
 .banner img {
@@ -23,20 +24,22 @@
 
 .banner h1,
   {
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   margin-top: 0;
   margin-bottom: -30px;
-  font-size: 450%;
+  font-size: 45px;
   word-spacing: 4px;
   letter-spacing: 1px;
   }
 
 .banner h2 {
-  font-size: 300%;
+  font-weight: 500;
+  font-size: 32px;
   word-spacing: 2px;
   margin-bottom: 30px;
+  margin-top: -30px;
   word-spacing: 2px;
   color: #fff;
 }

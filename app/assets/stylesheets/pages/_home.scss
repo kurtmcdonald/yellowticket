@@ -1,16 +1,115 @@
 // Specific CSS for your home-page
-@gray-darker:               #444444;
-@gray-dark:                 #696969;
-@gray:                      #999999;
-@gray-light:                #cccccc;
-@gray-lighter:              #ececec;
-@gray-lightest:             lighten(@gray-lighter,4%);
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/*--------------------------------------*/
+/* HOW IT WORKS */
+/*--------------------------------------*/
+
+.section-steps {
+  background-color: #f4f4f4;
 }
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 25px;
+  margin-top: 30px;
+  margin-left: -195px;
+}
+
+
+.steps-box:last-child {
+  padding-left: 10px;
+  margin-top: 35px;
+}
+
+.app-screen {
+  width: 25%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: #ff9f43;
+  border: 2px solid #ff9f43;
+  display: inline-block;
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  text-align: center;
+  padding: 8px;
+  float: left;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.works-step p {
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.section-steps h2 {
+  font-size: 32px;
+  font-weight: 500;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: black;
+  margin-top: 40px;
+}
+
+.section-steps h2:after {
+  display: block;
+  height: 2px;
+  background-color: black;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/*--------------------------------------*/
+/* STATEMENT MISSION */
+/*--------------------------------------*/
+
+.statement-header {
+  margin-top: 40px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: black;
+  margin-bottom: -10px;
+  }
+
+.statement-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: black;
+  margin-top: 40px;
+}
+
+.statement-header h2:after {
+  display: block;
+  height: 2px;
+  background-color: black;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
 
 .cards {
   display: flex;
@@ -89,123 +188,18 @@
 
 .card__title {
   color: #696969;;
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .card__text {
   flex: 1 1 auto;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
 
-/*--------------------------------------*/
-/* HOW IT WORKS */
-/*--------------------------------------*/
-
-.section-steps {
-  background-color: #f4f4f4;
-}
-
-.steps-box:first-child {
-  text-align: right;
-  padding-right: 3%;
-  margin-top: 30px;
-}
-
-
-.steps-box:last-child {
-  padding-left: 3%;
-  margin-top: 70px;
-}
-
-.app-screen {
-  width: 40%;
-}
-
-.works-step {
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-.works-step:last-of-type {
-  margin-bottom: 80px;
-}
-
-.works-step div {
-  color: #ff9f43;
-  border: 2px solid #ff9f43;
-  display: inline-block;
-  border-radius: 50%;
-  height: 54px;
-  width: 54px;
-  text-align: center;
-  padding: 5px;
-  float: left;
-  font-size: 150%;
-  margin-right: 20px;
-}
-
-.works-step p {
-  font-size: 90%;
-  line-height: 145%;
-}
-.btn-app {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-
-}
-
-.btn-app:link,
-.btn-app:visited {
-  border: 0;
-}
-
-.section-steps h2 {
-  font-size: 180%;
-  word-spacing: 2px;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-  color: black;
-  margin-top: 40px;
-}
-
-.section-steps h2:after {
-  display: block;
-  height: 2px;
-  background-color: black;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.statement-header {
-  margin-top: 40px;
-  word-spacing: 2px;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-  color: black;
-  margin-bottom: -10px;
-}
-
-.statement-header h2 {
-    font-size: 40px;
-    color: black;
-}
-
-.statement-header h2:after {
-  display: block;
-  height: 2px;
-  background-color: black;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
