@@ -1,0 +1,21 @@
+.show-header {
+  margin-top: 40px;
+  height: 400px;
+  width: 100%;
+  // display: flex;
+  // justify-content: space-around;
+}
+
+.show-items-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 10px;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.items-header {
+  font-size: 20px;
+  padding: 5px;
+  margin: 15px;
+}

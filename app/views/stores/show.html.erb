@@ -1,14 +1,28 @@
-
+<%= javascript_pack_tag 'show_page_javascript' %>
 <div class="container">
-  <%= render "shared/basket" %>
-  <h1> <%= @store.name %></h1>
-  <h3> <%= @store.address %> </h3>
-  <p> <%= @store.description %></p>
-  <p> owner: <%= @store.user.email %></p>
-  <p><strong>Items:</strong></p>
-  <ul>
+  <div class="show-header">
+    <%= render "shared/store-show-info-card" %>
+    <%= render "shared/basket" %>
+  </div>
+
+  <div class="items-header"><strong>Items:</strong></div>
+  <div class="show-items-grid">
     <% @store.items.each do |item| %>
-      <li><%= item.name %> - £<%= item.price %> - <%= link_to "Add to basket", create_order_path(item.id), method: :post %></li>
+      <div class="item-card" id="item-<%= item.id %>" >
+        <div class="empty-image"></div>
+        <div class="item-info">
+          <div><strong><%= item.name %></strong> </div>
+          <div class="item-card-prices">
+            <span class="old-price">£<%= item.price %></span>
+            <i class="fas fa-arrow-right"></i>
+            <span>£<%= item.discounted_price %></span>
+          </div>
+          <div class="text-center">
+            <%= link_to "Add to basket", create_order_path(item.id), method: :post, class: "add-to-basket-btn" %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
+

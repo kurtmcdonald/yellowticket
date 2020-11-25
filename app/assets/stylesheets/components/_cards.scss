@@ -1,0 +1,21 @@
+.item-card {
+  font-size: 16px;
+  background-color: white;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 10px rgb(227, 227, 227);
+
+  .empty-image {
+    background-color: gray;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .item-info {
+    padding: 20px;
+  }
+
+  .item-card-prices {
+    padding: 10px;
+  }
+}
