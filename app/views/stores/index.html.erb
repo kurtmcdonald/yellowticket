@@ -3,13 +3,13 @@
 </div>
 
 <div class="container">
-  <h2>Missing something for your meal? See whats on offer for...</h2> 
+  <h2>Missing something for your meal? See whats on offer for...</h2>
   <div class="store-cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
      <h3 class="suggestion-text">Breakfast</h3>
     </div>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1478998674531-cb7d22e769df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
-     <h3 class="suggestion-text">Lunch</h3> 
+     <h3 class="suggestion-text">Lunch</h3>
     </div>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
       <h3 class="suggestion-text">Dinner</h3>
@@ -35,8 +35,8 @@
           <strong> new price: <%= item.discounted_price %></strong>
           <button type="button" class="btn btn-warning ml-5"><%= link_to "Add to basket", create_order_path(item.id), method: :post %></button>
         </div>
-   </div>
-      <% end %>
+    </div>
+    <% end %>
     </div>
   </div>
   <% end %>

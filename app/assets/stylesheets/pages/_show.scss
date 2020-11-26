@@ -33,15 +33,39 @@
 }
 
 // Media Queries for grids
+@media(max-width: 1200px) {
+  .show-items-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .show-header {
+    width: 35vw;
+    height: 500px;
+  }
+}
+
+
 @media(max-width: 992px) {
   .show-items-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .show-header {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 766px) {
   .show-items-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .show-header {
+    width: 100%;
+    margin: 0;
+    height: auto;
   }
 }
 
