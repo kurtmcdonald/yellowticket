@@ -13,9 +13,24 @@ class StoresController < ApplicationController
     end
   end
 
+  def new
+    @store = Store.new
+  end
+
+  def create
+    @store = Store.new(stores_params)
+    @store.user = current_user
+    @store.save
+    redirect_to store_path(@store.id)
+  end
+
   private
 
   def current_orders
     @orders = Order.where({ user: current_user, collected: false})
+  end
+
+  def stores_params
+    params.require(:store).permit(:name, :address, :description)
   end
 end
