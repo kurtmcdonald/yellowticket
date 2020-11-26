@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse main_list" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="" href="#">Home</a>
+        <%= link_to "Home", root_path%>
       </li>
       <% if current_user && current_user.owner %>
         <li class="nav-item ">
@@ -19,7 +19,7 @@
         <li class="nav-item ">
           <%= link_to "Create a store", new_store_path %>
         </li>
-      <% elsif current_user %>
+      <% else current_user %>
         <li class="nav-item">
           <%= link_to "My Feed", stores_path %>
         </li>
