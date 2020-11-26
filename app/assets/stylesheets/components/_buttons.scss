@@ -56,25 +56,14 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
   a {
     color: white;
+    font-weight: bold;
   }
 }
 
-@media(max-width: 992px) {
-.btn-full:link,
-.btn-full:visited,
-.btn-ghost:link,
-.btn-ghost:visited,
-{
-  padding: 8px 28px;
-  font-weight: 400;
-  font-size: 16px;
-  margin-left: -20px;
-  margin-right: 25px;
-}
-}
 // Add-to-basket-btn media query
 @media(max-width: 576px) {
   .add-to-basket-btn {
@@ -83,6 +72,11 @@
     margin: 0;
     border-radius: 0 10px 10px 0;
   }
+  .btn-app {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
 }
 
 .btn-app {
@@ -91,7 +85,24 @@
   margin-right: 10px;
 }
 
+@media(max-width: 576px) {
+  .btn-app {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+}
+
 .btn-app:link,
 .btn-app:visited {
   border: 0;
+}
+
+.add-item-btn,
+.edit-btn {
+  width: 100%;
+}
+
+.add-item-btn {
+  margin-top: 5px;
 }
