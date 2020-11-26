@@ -2,6 +2,7 @@
 <%= render "shared/searchbar" %>
 </div>
 
+
 <div class="container">
   <h2>Missing something for your meal? See whats on offer for...</h2> 
   <div class="store-cards">
@@ -18,10 +19,10 @@
 </div>
 
 <div class="container">
-  <h1>All stores near you</h1>
+  <h2>All stores near you</h2>
   <% @stores.each do |store| %>
     <div class="store-title">
-      <h2> <%= link_to store.name, store_path(store.id) %></h2>
+      <h3> <%= link_to store.name, store_path(store.id) %></h3>
     <p> <%= store.address %> </p></div>
   <div class="card-product">
     <div class="store-items">

@@ -3,12 +3,12 @@
   width: 100%;
   overflow-x: scroll;
   height: 270px;
-  background: #f8f8ff;
+  background: #fff;
   border-radius: 5px;
+  margin-bottom: 12px;
 }
 .store-body {
-  margin: 10px;
-  background-color: #FFf;
+  background-color: #f8f8ff;
   width: 350px;
   height: 100px;
   flex-shrink: 0;
@@ -55,6 +55,7 @@
 }
 h1,
 h2,
+h3,
 p,
  {
   color: #353B48;
