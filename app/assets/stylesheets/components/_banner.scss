@@ -44,3 +44,31 @@
   color: #fff;
 }
 
+@media(max-width: 992px) {
+  .banner h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: -50px;
+    font-size: 32px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin-left: -20px;
+  }
+
+  .banner h2 {
+    font-weight: 500;
+    font-size: 24px;
+    word-spacing: 2px;
+    margin-bottom: 70px;
+    margin-top: -20px;
+    word-spacing: 2px;
+    margin-left: -20px;
+}
+    .banner img {
+      height: 100px;
+      width: 100px;
+      margin-left: 30px;
+      margin-bottom: 28px;
+
+  }
+}
