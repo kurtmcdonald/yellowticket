@@ -2,9 +2,7 @@
   width: 50vw;
   background-color: white;
   border-radius: 10px;
-  // padding: 20px;
   margin-left: 20px;
-  margin-top: 135px;
   box-shadow: 15px 15px 10px rgb(227, 227, 227);
   font-size: 16px;
   display: flex;
@@ -22,6 +20,7 @@
 
   .store-info {
     padding: 20px;
+    min-width: 35vw;
   }
 
   h3 {
@@ -29,11 +28,13 @@
   }
 }
 
+
+
 // Media Queries for grids
 @media(max-width: 1200px) {
   .store-info-container {
-    display: block;
     width: 45vw;
+    display: block;
     .empty-image {
       width: 45vw;
       height: 200px;
@@ -45,6 +46,7 @@
 
 @media(max-width: 992px) {
   .store-info-container {
+    display: block;
     width: 100%;
     margin: 0;
     margin-top: 135px;
@@ -73,5 +75,4 @@
     margin-top: 65px;
     border-radius: 0;
   }
-
 }
