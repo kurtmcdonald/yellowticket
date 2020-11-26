@@ -3,12 +3,14 @@
 <div class="container">
 <% if @store.user == current_user %>
   <!-- The current user is the owner -->
-    <div class="show-owner-header">
+    <div class="show-header">
       <%= render "shared/store-show-info-card" %>
-      <%= render "shared/show-edit-box" %>
+      <div class="edit-add-box">
+        <%= render "shared/show-edit-box" %>
+        <%= render "shared/add-item-modal" %>
+        <%= render "shared/edit-store-modal" %>
+      </div>
     </div>
-    <%= render "shared/edit-store-modal" %>
-    <%= render "shared/add-item-modal" %>
 <% else %>
   <!-- The current user is not the owner -->
     <div class="show-header">
@@ -37,5 +39,5 @@
         <% end %>
     </div>
   <% end %>
-</div>
+  </div>
 </div>

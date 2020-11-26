@@ -56,9 +56,11 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
   a {
     color: white;
+    font-weight: bold;
   }
 }
 
@@ -81,4 +83,13 @@
 .btn-app:link,
 .btn-app:visited {
   border: 0;
+}
+
+.add-item-btn,
+.edit-btn {
+  width: 100%;
+}
+
+.add-item-btn {
+  margin-top: 5px;
 }

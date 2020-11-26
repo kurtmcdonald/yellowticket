@@ -1,17 +1,6 @@
 .show-header {
-  margin-top: 40px;
-  height: 400px;
+  margin-top: 140px;
   width: 100%;
-  // display: flex;
-  // justify-content: space-around;
-}
-
-.show-owner-header {
-  margin-top: 40px;
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
 }
 
 .show-items-grid {
@@ -28,20 +17,55 @@
   margin: 15px;
 }
 
-.edit-box {
-
+.edit-add-box {
+  position: absolute;
+  top: 150px;
+  right: 15%;
+  width: 300px;
 }
 
+
 // Media Queries for grids
+@media(max-width: 1200px) {
+  .show-items-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .show-header {
+    width: 35vw;
+    height: 500px;
+  }
+}
+
+
 @media(max-width: 992px) {
   .show-items-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .show-header {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .edit-add-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+  }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 766px) {
   .show-items-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .show-header {
+    width: 100%;
+    margin: 0;
+    height: auto;
   }
 }
 
