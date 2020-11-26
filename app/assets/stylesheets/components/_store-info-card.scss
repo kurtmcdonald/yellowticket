@@ -18,9 +18,17 @@
     border-radius: 10px 0 0 10px;
   }
 
+  .store-image {
+    width: 50vw;
+    min-height: 100%;
+    background-origin: center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+  }
+
   .store-info {
     padding: 20px;
-    min-width: 35vw;
+    min-width: 30vw;
   }
 
   h3 {
@@ -40,6 +48,13 @@
       height: 200px;
       border-radius: 10px 10px 0 0;
     }
+
+    .store-image {
+      width: 45vw;
+      min-height: 200px;
+      background-origin: center;
+      border-radius: 10px 10px 0 0;
+    }
   }
 }
 
@@ -53,6 +68,10 @@
 
     .empty-image {
       display: none;
+    }
+
+    .store-image {
+      width: 100%;
     }
   }
 }

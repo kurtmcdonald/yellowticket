@@ -23,7 +23,12 @@
 <div class="show-items-grid">
   <% @store.items.each do |item| %>
     <div class="item-card" id="item-<%= item.id %>" >
-      <div class="empty-image"></div>
+      <% if item.photo.attached? %>
+        <div class="item-img" style="background-image: url('<%= cl_image_path item.photo.key, height: 100, width: 100 %>')"></div>
+      <% else %>
+        <div class="empty-image"></div>
+      <% end %>
+
       <div class="item-info">
         <div><strong><%= item.name %></strong> </div>
         <div class="item-card-prices">
