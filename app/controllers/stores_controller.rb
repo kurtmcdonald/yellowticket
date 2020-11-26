@@ -2,7 +2,11 @@ class StoresController < ApplicationController
   before_action :current_orders
 
   def index
-    @stores = Store.all
+    if params[:query].present?
+      @stores = Store.search_field(params[:query])
+    else
+      @stores = Store.all 
+    end
   end
 
   def show
