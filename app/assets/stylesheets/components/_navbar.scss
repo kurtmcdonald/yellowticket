@@ -1,8 +1,3 @@
-html,
-body {
-    margin-top: 45px;
-}
-
 /* Navbar section */
 
 .nav {
@@ -10,7 +5,7 @@ body {
     height: 65px;
     line-height: 65px;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-between!important;
 }
 
 .logo {
@@ -66,7 +61,7 @@ body {
 }
 
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-between!important;
   background: #353B48;
   overflow: hidden;
   position: fixed;
