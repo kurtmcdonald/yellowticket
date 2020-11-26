@@ -3,15 +3,14 @@
 </div>
 
 <div class="container mt-5">
-   <% if @order_users.empty? %>
-      <p class="text-center p-3 m-3">There are no pending orders!</p>
+  <% if @order_users.empty? %>
+    <p class="text-center p-3 m-3">There are no pending orders!</p>
   <% else %>
-  <% @order_users.each do |user| %>
-    <h2> <%= user.first_name.capitalize %>'s order <h2>
-    <% user.orders.each do |order| %>
-    <%= order.item.name %>,
-    <%end%>
+    <% @order_users.each do |user| %>
+      <h2> <%= user.first_name.capitalize %>'s order <h2>
+      <% user.orders.where(collected: false).each do |order| %>
+        <%= order.item.name %>,
+      <% end %>
     <% end %>
-  <% end %>
-
+   <% end %>
 </div>
