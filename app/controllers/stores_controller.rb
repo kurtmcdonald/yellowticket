@@ -6,6 +6,7 @@ class StoresController < ApplicationController
   end
 
   def show
+    @item = Item.new
     @store = Store.find(params[:id])
     @count = 0
     @orders.each do |order|
@@ -18,10 +19,26 @@ class StoresController < ApplicationController
   end
 
   def create
+    # Going to need authorisation on these actions
     @store = Store.new(stores_params)
     @store.user = current_user
     @store.save
     redirect_to store_path(@store.id)
+  end
+
+  def add_item
+    # Going to need authorisation on these actions
+    @item = Item.new(item_params)
+    @item.store = Store.find(params[:id])
+    @item.save
+    redirect_back(fallback_location: :stores_path)
+  end
+
+  def update
+    # Going to need authorisation on these actions
+    @store = Store.find(params[:id])
+    @store.update(stores_params)
+    redirect_back(fallback_location: :stores_path)
   end
 
   private
@@ -32,5 +49,9 @@ class StoresController < ApplicationController
 
   def stores_params
     params.require(:store).permit(:name, :address, :description)
+  end
+
+  def item_params
+    params.require(:item).permit(:name, :price, :discounted_price)
   end
 end

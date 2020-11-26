@@ -1,28 +1,41 @@
 <%= javascript_pack_tag 'show_page_javascript' %>
-<div class="container">
-  <div class="show-header">
-    <%= render "shared/store-show-info-card" %>
-    <%= render "shared/basket" %>
-  </div>
 
-  <div class="items-header"><strong>Items:</strong></div>
-  <div class="show-items-grid">
-    <% @store.items.each do |item| %>
-      <div class="item-card" id="item-<%= item.id %>" >
-        <div class="empty-image"></div>
-        <div class="item-info">
-          <div><strong><%= item.name %></strong> </div>
-          <div class="item-card-prices">
-            <span class="old-price">£<%= item.price %></span>
-            <i class="fas fa-arrow-right"></i>
-            <span>£<%= item.discounted_price %></span>
-          </div>
+<div class="container">
+<% if @store.user == current_user %>
+  <!-- The current user is the owner -->
+    <div class="show-owner-header">
+      <%= render "shared/store-show-info-card" %>
+      <%= render "shared/show-edit-box" %>
+    </div>
+    <%= render "shared/edit-store-modal" %>
+    <%= render "shared/add-item-modal" %>
+<% else %>
+  <!-- The current user is not the owner -->
+    <div class="show-header">
+      <%= render "shared/store-show-info-card" %>
+      <%= render "shared/basket" %>
+    </div>
+<% end %>
+
+<div class="items-header"><strong>Items:</strong></div>
+<div class="show-items-grid">
+  <% @store.items.each do |item| %>
+    <div class="item-card" id="item-<%= item.id %>" >
+      <div class="empty-image"></div>
+      <div class="item-info">
+        <div><strong><%= item.name %></strong> </div>
+        <div class="item-card-prices">
+          <span class="old-price">£<%= item.price %></span>
+          <i class="fas fa-arrow-right"></i>
+          <span>£<%= item.discounted_price %></span>
         </div>
+      </div>
+        <% if current_user != @store.user %>
           <div class="add-to-basket-btn">
             <%= link_to "Add to basket", create_order_path(item.id), method: :post %>
           </div>
-      </div>
-    <% end %>
-  </div>
+        <% end %>
+    </div>
+  <% end %>
 </div>
-
+</div>
