@@ -12,16 +12,16 @@
       <li class="nav-item active">
         <a class="" href="#">Home</a>
       </li>
-      <% if current_user.owner %>
+      <% if current_user && current_user.owner %>
         <li class="nav-item ">
           <a class="" href="#">Orders</a>
         </li>
         <li class="nav-item ">
           <%= link_to "Create a store", new_store_path %>
         </li>
-      <% else %>
+      <% elsif current_user %>
         <li class="nav-item">
-          <%= link_to "My Feed", store_path %>
+          <%= link_to "My Feed", stores_path %>
         </li>
       <% end %>
       <li class="nav-item">
