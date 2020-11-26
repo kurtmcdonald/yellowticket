@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse main_list" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="" href="#">Home</a>
+        <%= link_to "Home", root_path%>
       </li>
       <% if current_user && current_user.owner %>
         <li class="nav-item ">
@@ -23,13 +23,13 @@
         <li class="nav-item">
           <%= link_to "My Feed", stores_path %>
         </li>
-      <!-- <%# end %> -->
+      <% end %>
       <li class="nav-item">
-        <!-- <%# if user_signed_in? %> -->
+        <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
-        <!-- <%# else %> -->
+        <% else %>
           <%= link_to "Sign In", new_user_session_path, class: "" %>
-        <!-- <%# end %> -->
+        <% end %>
       </li>
       <li class="nav-item">
         <a id="brand-color" href="#">Total savings £#</a>
