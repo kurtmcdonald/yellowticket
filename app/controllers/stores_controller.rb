@@ -41,6 +41,10 @@ class StoresController < ApplicationController
     redirect_back(fallback_location: :stores_path)
   end
 
+  def orders
+    @order_users = Store.find(params[:id]).orders.where(collected: false).map { |order| order.user }.uniq
+  end
+
   private
 
   def current_orders
