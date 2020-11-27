@@ -28,7 +28,11 @@
     <div class="store-items">
        <% store.items.each do |item| %>
     <div class="card-item">
-      <img class="card-image" src="https://images.unsplash.com/photo-1551462147-37885acc36f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="image">
+      <% if item.photo.attached? %>
+        <%= cl_image_tag item.photo.key, class: "card-image" %>
+      <% else %>
+        <img class="card-image" src="https://images.unsplash.com/photo-1551462147-37885acc36f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="image">
+      <% end %>
         <div class="store-body">
           <div class="item-name" ><%= item.name %></div>
           <s>original price:<%= item.price %></s>
@@ -36,8 +40,8 @@
           <strong> new price: <%= item.discounted_price %></strong>
           <%= link_to "Add to basket", create_order_path(item.id), method: :post, class: "btn btn-warning ml-5" %>
         </div>
-   </div>
-      <% end %>
+    </div>
+    <% end %>
     </div>
   </div>
   <% end %>

@@ -5,7 +5,7 @@ class StoresController < ApplicationController
     if params[:query].present?
       @stores = Store.search_field(params[:query])
     else
-      @stores = Store.all 
+      @stores = Store.all
     end
   end
 
@@ -45,6 +45,10 @@ class StoresController < ApplicationController
     redirect_back(fallback_location: :stores_path)
   end
 
+  def orders
+    @order_users = Store.find(params[:id]).orders.where(collected: false).map { |order| order.user }.uniq
+  end
+
   private
 
   def current_orders
@@ -52,10 +56,10 @@ class StoresController < ApplicationController
   end
 
   def stores_params
-    params.require(:store).permit(:name, :address, :description)
+    params.require(:store).permit(:name, :address, :description, :photo)
   end
 
   def item_params
-    params.require(:item).permit(:name, :price, :discounted_price)
+    params.require(:item).permit(:name, :price, :discounted_price, :photo)
   end
 end

@@ -1,16 +1,15 @@
 .store-info-container {
-  max-width: 700px;
+  width: 50vw;
   background-color: white;
   border-radius: 10px;
-  // padding: 20px;
-  margin: 15px;
+  margin-left: 20px;
   box-shadow: 15px 15px 10px rgb(227, 227, 227);
   font-size: 16px;
   display: flex;
 
   .empty-image {
     min-height: 100%;
-    min-width: 200px;
+    width: 50vw;
     background-color: gray;
     display: flex;
     align-items: center;
@@ -19,8 +18,17 @@
     border-radius: 10px 0 0 10px;
   }
 
+  .store-image {
+    width: 50vw;
+    min-height: 100%;
+    background-origin: center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+  }
+
   .store-info {
     padding: 20px;
+    min-width: 30vw;
   }
 
   h3 {
@@ -28,27 +36,62 @@
   }
 }
 
+
+
 // Media Queries for grids
+@media(max-width: 1200px) {
+  .store-info-container {
+    width: 45vw;
+    display: block;
+    .empty-image {
+      width: 45vw;
+      height: 200px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .store-image {
+      width: 45vw;
+      min-height: 200px;
+      background-origin: center;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
+
+
 @media(max-width: 992px) {
+  .store-info-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 135px;
+
+    .empty-image {
+      display: none;
+    }
+
+    .store-image {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .store-info-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+@media(max-width: 576px) {
   .container {
     margin: 0;
     padding: 0;
   }
 
   .store-info-container {
-    width: 100%;
-    margin: 0;
-
-    .empty-image {
-      display: none;
-    }
+    margin-top: 65px;
+    border-radius: 0;
   }
-}
-
-@media(max-width: 768px) {
-
-}
-
-@media(max-width: 576px) {
-
 }

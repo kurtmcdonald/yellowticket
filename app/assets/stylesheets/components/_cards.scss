@@ -11,6 +11,13 @@
     border-radius: 10px 10px 0 0;
   }
 
+  .item-img {
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+  }
+
   .item-info {
     padding: 20px;
   }
@@ -36,6 +43,10 @@
   }
 
   .empty-image {
+    display: none;
+  }
+
+  .item-img {
     display: none;
   }
 
