@@ -1,2 +1,31 @@
 name,price,discounted_price,store_name,img_url
 Cucumber,2,1,Kurts Grocery Store,https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/283/283006/sliced-cucumber-with-lots-of-health-benefits.jpg
+Apple,1.5,1,Kurts Grocery Store,https://images.all-free-download.com/images/graphiclarge/fresh_red_apple_stock_photo_167147.jpg
+Eggs,3,2,Kurts Grocery Store,https://tincknellcountrystore.co.uk/images/prods10/108368.jpg
+Dragon Fruit,6,2,Kurts Grocery Store,https://static.fanpage.it/wp-content/uploads/sites/22/2019/06/dragonfruits-638x425.jpg
+Lettuce,0.8,0.1,Kurts Grocery Store,https://images.squarespace-cdn.com/content/v1/5a8212f5e9bfdff7bedd9efb/1521747531062-L77A2QZE5XLJ8ST5MS94/ke17ZwdGBToddI8pDm48kKiwxLAZoKKELnay-hXhuPd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmHHRMqniMJbuwH8EZRFFu5Tzgf85Acs_WtHs4swG9RkqoemJy3Tf3Q0GTV6cCtU7T/Lettuce.jpg
+Potatoes,4,3,Kurts Grocery Store,https://cdn.britannica.com/89/170689-131-D20F8F0A/Potatoes.jpg
+Chicken breast,4,2,Tom's Kitchen,https://images.squarespace-cdn.com/content/v1/5c61c1d24d546e66bcd25237/1556122660039-QA1UWNI16T7RBV56QLZ6/ke17ZwdGBToddI8pDm48kGZJV0_4J4XfA5kQwntJKJh7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfOMGjBgkLntYFC7NMbExEIOZAKVRLGW_CN8WE5fOteHqJu8UEX0SII_mcPJpQVdrQ/nae-bsb-edit.jpg
+Cod fillet,5,3.5,Tom's Kitchen,https://az836796.vo.msecnd.net/media/image/product/en/large/0022816500000.jpg
+Minced Beef,6,4,Tom's Kitchen,https://upload.wikimedia.org/wikipedia/commons/2/21/2018-04-22_Minced_beef_meat.jpg
+Peppers,3,1,Tom's Kitchen,https://cdn.britannica.com/12/147312-050-BEC6A59E/Bell-peppers.jpg
+Brie,5,3.5,Tom's Kitchen,https://cdn.pixabay.com/photo/2015/02/10/02/42/cheese-630511_960_720.jpg
+Greek Yoghurt,4,2,Tom's Kitchen,https://cdn-prod.medicalnewstoday.com/content/images/articles/323/323169/greek-yoghurt-in-bowl.jpg
+Milk,2.5,1.5,Alfie's Breakfast Cafe,https://fd-v5-api.imgix.net/assets/product_images/652eb8a26ecdcd4eced83380ee98e4b1d34c0f30e00b6dc39adecf87a10341df/Ivy_house_2ltr_skimmed_Farmdrop20_Jan739295.jpg
+Bacon,4,2,Alfie's Breakfast Cafe,https://groceries.morrisons.com/productImages/121/121964011_0_640x640.jpg
+Sliced Bread,1.5,0.5,Alfie's Breakfast Cafe,https://www.history.com/.image/c_fit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_620/MTU3OTIzNTgwNjgzNDk1MDU4/who-invented-sliced-breads-featured-photo.jpg
+Hash Brown,2,1,Alfie's Breakfast Cafe,https://www.mccainfoodservice.co.uk/wp-content/uploads/2019/01/Hash-Browns-45120_J.jpg
+Tomato,1,0.3,Alfie's Breakfast Cafe,https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bright_red_tomato_and_cross_section02.jpg/1024px-Bright_red_tomato_and_cross_section02.jpg
+Mushroom,0.5,0.2,Alfie's Breakfast Cafe,https://www.treehugger.com/thmb/4Do06cCSlY1JBrj0dYwP_lRCNzg=/1000x667/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2016__12__cremini-mushrooms-feb565a9fb8a4ab7bfd152c770946fb5.jpg
+Sausages,8,4,Club Morgan,https://cdn.ecommercedns.uk/files/1/236041/1/9495691/chalgrove-2.jpg
+Mangosteen,6,2,Club Morgan,https://www.isagenixhealth.net/wp-content/uploads/2020/06/Mangosteen-Ingredient-Spotlight960X540-1.jpg
+Jack Daniels,27,15,Club Morgan,https://aroundustyroads.files.wordpress.com/2014/04/jack-daniels.jpg
+Steak,10,7,Club Morgan,https://www.seriouseats.com/recipes/images/2015/05/Anova-Steak-Guide-Sous-Vide-Photos15-beauty.jpg
+Club Sandwich ,7,3,Club Morgan,https://realfood.tesco.com/media/images/RFO-1400x919-ChickenClubSandwich-0ee77c05-5a77-49ac-a3bd-4d45e3b4dca7-0-1400x919.jpg
+Loaded Fries,5,1,Club Morgan,https://tul.imgix.net/content/article/best-loaded-fries-auckland.jpg
+Sausage roll,2,1.5,Boris's Bakery,https://www.cips.org/PageFiles/136551/p50-DC050091v2-1160x430.jpg
+Pain au Chocolat,4,1,Boris's Bakery,https://static.onecms.io/wp-content/uploads/sites/9/2020/08/21/pain-au-chocolat-FT-RECIPE0920.jpg
+Lemon Tart,3,1,Boris's Bakery,https://www.bakedbyanintrovert.com/wp-content/uploads/2020/03/Lemon-Tart-Recipe-735x735.jpg
+Croissant,2.5,0.7,Boris's Bakery,https://bakingamoment.com/wp-content/uploads/2019/02/IMG_2757-croissant-recipe-easy.jpg
+Sourdough Loaf,5,2.5,Boris's Bakery,https://bakerbettie.com/wp-content/uploads/2019/09/sourdough-1-e1568773284562.jpg
+Blueberry Muffin,2,1,Boris's Bakery,https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Wild-Blueberry-Muffins_EXPS_FTTMZ19_787_B03_05_7b_rms.jpg

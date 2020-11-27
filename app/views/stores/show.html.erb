@@ -32,9 +32,9 @@
       <div class="item-info">
         <div><strong><%= item.name %></strong> </div>
         <div class="item-card-prices">
-          <span class="old-price">£<%= item.price %></span>
+          <span class="old-price"><%= number_to_currency(item.price, unit: "£") %></span>
           <i class="fas fa-arrow-right"></i>
-          <span>£<%= item.discounted_price %></span>
+          <span><%=number_to_currency(item.discounted_price, unit: "£") %></span>
         </div>
       </div>
         <% if current_user != @store.user %>

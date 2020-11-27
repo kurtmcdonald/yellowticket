@@ -15,9 +15,9 @@
         <div class="basket-item">
           <div><%= order.item.name %> x<%= order.quantity %></div>
           <div>
-            <span class="old-price">£<%= order.item.price * order.quantity %></span>
+            <span class="old-price"><%= number_to_currency(order.item.price * order.quantity, unit: "£")%></span>
             <i class="fas fa-arrow-right"></i>
-            <span>£<%= order.item.discounted_price * order.quantity %></span>
+            <span><%= number_to_currency(order.item.discounted_price * order.quantity, unit: "£")%></span>
           </div>
         </div>
         <% sum += order.item.price * order.quantity %>
@@ -32,10 +32,10 @@
         <div class="price">
           <span class="old-price">£<%= sum %></span>
           <i class="fas fa-arrow-right"></i>
-          <span>£<%= discounted_sum %></span>
+          <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
         </div>
         <div class="price-sm">
-          <span>£<%= discounted_sum %></span>
+          <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
         </div>
       </div>
 
