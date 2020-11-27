@@ -72,12 +72,25 @@
     margin: 0;
     border-radius: 0 10px 10px 0;
   }
+  .btn-app {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
 }
 
 .btn-app {
   height: 50px;
   width: auto;
   margin-right: 10px;
+}
+
+@media(max-width: 576px) {
+  .btn-app {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
 }
 
 .btn-app:link,
