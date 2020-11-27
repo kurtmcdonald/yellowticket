@@ -14,10 +14,13 @@
       </li>
       <% if current_user && current_user.owner %>
       <li class="nav-item ">
-        <a class="" href="#">Orders</a>
+        <%= link_to "Orders", orders_store_path(current_user.stores.first.id) %>
       </li>
       <li class="nav-item ">
         <%= link_to "Create a store", new_store_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "My Store", stores_path %>
       </li>
       <% else current_user %>
       <li class="nav-item">
