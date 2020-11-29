@@ -116,3 +116,20 @@
 .add-item-btn {
   margin-top: 5px;
 }
+
+/*--------------------------------------*/
+/* ADD TO BASKET BUTTON ON INDEX/SHOW PAGE*/
+/*--------------------------------------*/
+
+.btn-basket {
+  padding: 5px 10px;
+  margin-left: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #FECD1A;
+  border: 1px solid #FECD1A;
+  color: #353B48;
+}

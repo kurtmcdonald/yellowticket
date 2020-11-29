@@ -1,13 +1,23 @@
+.container {
+  font-family: Lora;
+}
+
+.container h2 {
+  text-align: center;
+}
+
 .store-items {
+  font-family: Lora;
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  height: 270px;
+  height: 280px;
   background: #fff;
   border-radius: 5px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 .store-body {
+  font-family: Lora;
   background-color: #f8f8ff;
   width: 350px;
   height: 100px;
@@ -25,6 +35,7 @@
 }
 
 .card-item {
+  font-family: Lora;
   height: 250px;
   width: 250px;
   background: white;
@@ -44,12 +55,14 @@
   opacity: .7;
 }
 .card-product {
+  font-family: Lora;
   overflow: hidden;
   background: white;
   display: flex;
   align-items: center;
 }
 .item-name {
+  font-family: Lora;
   font-size: 1rem;
   font-weight: bold;
   color: #353b48;
