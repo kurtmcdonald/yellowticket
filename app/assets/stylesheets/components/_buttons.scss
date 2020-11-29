@@ -45,6 +45,21 @@
   background-color: #495365;
 }
 
+@media(max-width: 429px) {
+  .btn-full:link,
+  .btn-full:visited,
+  .btn-ghost:link,
+  .btn-ghost:visited,
+  {
+    padding: 8px 22px;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: 0.2s;
+  }
+}
+
 .basket-button {
   margin-left: 100px;
 }
@@ -72,24 +87,14 @@
     margin: 0;
     border-radius: 0 10px 10px 0;
   }
-  .btn-app {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
 }
 
-.btn-app {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
 
-@media(max-width: 576px) {
+@media(max-width: 429px) {
   .btn-app {
-  height: 40px;
+  height: 30px;
   width: auto;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 }
 
