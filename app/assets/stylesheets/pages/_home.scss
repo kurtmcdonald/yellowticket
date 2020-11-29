@@ -145,12 +145,13 @@
 
 .cards__item {
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
   @media(min-width: 40rem) {
     width: 50%;
   }
   @media(min-width: 64rem) {
     width: 33.3333%;
+
   }
 }
 

@@ -45,7 +45,7 @@
   background-color: #495365;
 }
 
-@media(max-width: 429px) {
+@media only screen and (max-width: 429px) {
   .btn-full:link,
   .btn-full:visited,
   .btn-ghost:link,
@@ -90,7 +90,7 @@
 }
 
 
-@media(max-width: 429px) {
+@media only screen and (max-width: 429px) {
   .btn-app {
   height: 30px;
   width: auto;
