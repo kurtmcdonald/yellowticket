@@ -35,9 +35,9 @@
       <% end %>
         <div class="store-body">
           <div class="item-name" ><%= item.name %></div>
-          <s>original price:<%= item.price %></s>
+          <s>original price:<%= number_to_currency(item.price, unit: "£") %></s>
           <br>
-          <strong> new price: <%= item.discounted_price %></strong>
+          <strong> new price: <%= number_to_currency(item.discounted_price, unit: "£") %></strong>
           <%= link_to "Add to basket", create_order_path(item.id), method: :post, class: "btn btn-warning ml-5" %>
         </div>
     </div>
