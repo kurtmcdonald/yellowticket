@@ -43,6 +43,7 @@
   border-radius: 5px;
   object-fit: cover;
   background-position: center;
+  transition: 0.3s;
 }
 .card-category:hover {
   opacity: .7;
