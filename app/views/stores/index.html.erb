@@ -22,8 +22,8 @@
   <h2>All stores near you</h2>
   <% @stores.each do |store| %>
     <div class="store-title">
-      <h3> <%= link_to store.name, store_path(store.id) %></h3>
-    <p> <%= store.address %> </p></div>
+      <h3> <%= link_to store.name, store_path(store.id), class: "store-name" %></h3>
+    <p class="store-address"> <%= store.address %> </p></div>
   <div class="card-product">
     <div class="store-items">
        <% store.items.each do |item| %>

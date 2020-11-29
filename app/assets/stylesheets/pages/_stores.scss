@@ -6,6 +6,20 @@
   text-align: center;
 }
 
+.store-name{
+  color: #343B48;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+
+.store-address {
+  font-style: italic;
+  font-weight: 400;
+}
+
 .store-items {
   font-family: Lora;
   display: flex;
@@ -16,6 +30,7 @@
   border-radius: 5px;
   margin-bottom: 25px;
 }
+
 .store-body {
   font-family: Lora;
   background-color: #f8f8ff;
@@ -68,11 +83,4 @@
   font-weight: bold;
   color: #353b48;
 }
-h1,
-h2,
-h3,
-p,
- {
-  color: #353B48;
-  text-transform: none;
-}
+
