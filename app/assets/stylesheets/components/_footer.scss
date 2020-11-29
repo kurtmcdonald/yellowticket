@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 70px;
   padding: 0px 50px;
   color: #353B48;
   font-size: 12px;
@@ -13,9 +13,11 @@
   margin-top: 25px;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 429px) {
   .footer {
-  height: 60px;
+  height: 40px;
+  font-size: 10px;
+  padding: 0px 20px;
 }
 }
 .footer-links {
