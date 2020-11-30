@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <%= link_to "Checkout", confirmation_store_path, class: "btn basket-checkout" %>
+      <%= link_to "Checkout", checkout_store_path(params[:id]), method: :patch, class: "btn basket-checkout" %>
     </div>
 
   <% end %>

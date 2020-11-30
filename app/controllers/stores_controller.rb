@@ -10,6 +10,7 @@ class StoresController < ApplicationController
   end
 
   def show
+    @orders = Order.where(user: current_user, collected: false, status: ["pending"])
     @item = Item.new
     @store = Store.find(params[:id])
     @count = 0
@@ -46,7 +47,7 @@ class StoresController < ApplicationController
   end
 
   def orders
-    @order_users = Store.find(params[:id]).orders.where(collected: false).map { |order| order.user }.uniq
+    @order_users = Store.find(params[:id]).orders.where(collected: false, status: ["checkout", "accepted"]).map { |order| order.user }.uniq
   end
 
   private
