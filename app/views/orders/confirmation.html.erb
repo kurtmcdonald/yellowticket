@@ -13,7 +13,7 @@
     <%= link_to "Go back to my feed", stores_path %>
   <% elsif @status == "rejected" %>
     <p>We apologise <%= @store.name %> could not complete your order.</p>
-    <%= link_to "Confirm rejection and go back to feed", confirm_rejection_store_path(params[:id]), method: "patch" %>
+    <%= link_to "Go back to your feed", stores_path %>
   <% else %>
     <p>Order status: <%= @status %></p>
   <% end %>

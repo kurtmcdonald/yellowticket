@@ -3,23 +3,42 @@
 </div>
 
 <div class="container mt-5 w-50">
-  <% if @order_users.empty? %>
-    <p class="text-center p-3 m-3">There are no pending orders!</p>
-  <% else %>
-    <% @order_users.each do |user| %>
+  <%# if @order_users.empty? %>
+    <!-- <p class="text-center p-3 m-3">There are no pending orders!</p> -->
+  <%# else %>
+    <% @users_with_accepted_orders.each do |user| %>
     <div class="card">
       <h2> <%= user.first_name.capitalize %>'s order </h2>
-      <% user.orders.where(collected: false).each do |order| %>
+      <% user.orders.accepted.each do |order| %>
         <p class="text-center"><%= order.item.name %> x<%= order.quantity %></p>
       <% end %>
-      <% if user.orders.where(collected: false).first.status == "checkout" %>
-        <%= link_to "Accept", accept_order_store_path(params[:id], user.id), method: "patch", class: "mt-1 btn btn-success text-center" %>
-        <%= link_to "Reject", reject_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure want to reject this order?" }, class: "mt-1 btn btn-danger text-center" %>
-      <% elsif user.orders.where(collected: false).first.status == "accepted" %>
-        <%= link_to "Collected?", collect_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure all items were collected?" } %>
-      <% end %>
+      <%= link_to "Collected?", collect_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure all items were collected?" } %>
     </div>
-    <br>
     <% end %>
-   <% end %>
+    <br>
+  <%# end %>
+</div>
+
+      <%# if user.orders.where(collected: false).first.status == "checkout" %>
+        <%#= link_to "Accept", accept_order_store_path(params[:id], user.id), method: "patch", class: "mt-1 btn btn-success text-center" %>
+        <%#= link_to "Reject", reject_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure want to reject this order?" }, class: "mt-1 btn btn-danger text-center" %>
+      <%# elsif user.orders.where(collected: false).first.status == "accepted" %>
+
+<div class="container mt-5 w-50">
+  <%# if @order_users.empty? %>
+    <!-- <p class="text-center p-3 m-3">There are no pending orders!</p> -->
+  <%# else %>
+    <% @users_with_checkout_orders.each do |user| %>
+    <div class="card">
+      <h2> <%= user.first_name.capitalize %>'s order </h2>
+      <% console %>
+      <% user.orders.checkout.each do |order| %>
+        <p class="text-center"><%= order.item.name %> x<%= order.quantity %> <%= order.status %></p>
+      <% end %>
+      <%= link_to "Accept", accept_order_store_path(params[:id], user.id), method: "patch", class: "mt-1 btn btn-success text-center" %>
+      <%= link_to "Reject", reject_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure want to reject this order?" }, class: "mt-1 btn btn-danger text-center" %>
+    </div>
+    <% end %>
+    <br>
+  <%# end %>
 </div>

@@ -10,7 +10,6 @@ Rails.application.routes.draw do
       patch "orders/:user_id/accepted", to: "orders#accept", as: :accept_order
       patch "orders/:user_id/rejected", to: "orders#reject", as: :reject_order
       patch "orders/:user_id/collected", to: "orders#collect", as: :collect_order
-      patch "orders/confirm-rejection", to: "orders#confirm_rejection", as: :confirm_rejection
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
