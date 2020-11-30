@@ -19,7 +19,14 @@
     </div>
 <% end %>
 
+
 <div class="items-header"><strong>Items:</strong></div>
+<% flash.each do |type, msg| %>
+  <div class="p-3 m-2 alert-danger my-alert">
+    <span><%= msg %></span>
+    <span>Go back to: <%= link_to "#{@orders.last.item.store.name}", store_path(@orders.last.item.store), class: ".alert-link"%></span>
+  </div>
+<% end %>
 <div class="show-items-grid">
   <% @store.items.each do |item| %>
     <div class="item-card" id="item-<%= item.id %>" >

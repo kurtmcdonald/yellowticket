@@ -20,11 +20,11 @@ User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", p
 
 addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "61-65 Kensington Church St, Kensington, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
 puts "Creating Stores"
-Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first)
-Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second)
-Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"))
-Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last)
-Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: Faker::Restaurant.description, user: User.find_by(first_name: "alfie"))
+Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast") 
+Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second, tag_list: "Breakfast")
+Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
+Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
+Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: Faker::Restaurant.description, user: User.find_by(first_name: "alfie"), tag_list: "Breakfast")
 
 # Store.all.each do |store|
 #   puts "Adding items to store"

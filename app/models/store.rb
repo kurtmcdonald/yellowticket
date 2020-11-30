@@ -7,6 +7,8 @@ class Store < ApplicationRecord
   has_many :orders, through: :items, dependent: :destroy
   has_one_attached :photo
 
+  acts_as_taggable_on :tags
+
   include PgSearch::Model
   pg_search_scope :search_field,
     against: [ :name ],
