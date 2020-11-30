@@ -34,7 +34,11 @@ document.addEventListener('turbolinks:load', () => {
 
 // app/javascript/packs/application.js
 import { initMapbox } from '../plugins/init_mapbox';
+import { find_status } from '../plugins/order_status'
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  find_status();
 })
+
+// import status refresh js file from plugins (create file)

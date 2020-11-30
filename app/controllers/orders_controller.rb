@@ -70,4 +70,14 @@ class OrdersController < ApplicationController
     end
     redirect_to confirmation_store_path(params[:id])
   end
+
+
+  # Add an action that gives us the user's status
+  def check_status
+    user = current_user
+    respond_to do |format|
+      format.html
+      format.json { render json: { status: user.order_status } }
+    end
+  end
 end
