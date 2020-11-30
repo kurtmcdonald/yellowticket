@@ -2,9 +2,26 @@
 <br>
 
 <div class="container mt-5 text-center">
+  <p><%=  %></p>
   <h2 class="pending pulsate"><%=@store.name%> will confirm your order... <i class="far fa-clock"></i></h2>
   <h2 class="wait"><%=@store.name%> has confirmed your order... <i class="far fa-check-circle"></i></h3>
   <h2 class="wait">Your order is ready to be collected! <i class="fas fa-walking"></i></h4>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div id="map" class="col"
+=======
+  <% if @status == "collected" %>
+    <p>Your order has been marked as collected:</p>
+    <%= link_to "Go back to my feed", stores_path %>
+  <% elsif @status == "rejected" %>
+    <p>We apologise <%= @store.name %> could not complete your order.</p>
+    <%= link_to "Go back to your feed", stores_path %>
+  <% else %>
+    <p>Order status: <%= @status %></p>
+  <% end %>
 </div>
 
 <div class="container">
@@ -25,6 +42,14 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+    <div class="col mt-5">
+      <%= RQRCode::QRCode.new(root_path).as_svg(
+  offset: 0,
+  color: '000',
+  shape_rendering: 'crispEdges',
+  module_size: 6,
+  standalone: true
+).html_safe %>
+    </div>
+  </div>
 </div>
-
-
