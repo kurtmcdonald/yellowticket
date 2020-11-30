@@ -4,3 +4,17 @@
 @import "confirmation";
 @import "show";
 @import "order";
+
+
+.suggestion-text {
+  color: #ffffff;
+  font-family: Lora;
+  font-size: 26px;
+}
+
+.suggestion-text:hover,
+.suggestion-text:active,
+{
+  color: #ffffff;
+  text-decoration: none;
+}
