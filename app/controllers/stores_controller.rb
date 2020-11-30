@@ -2,8 +2,11 @@ class StoresController < ApplicationController
   before_action :current_orders
 
   def index
+    @tags = Store.all.map { |store| store.tag_list }.flatten.uniq
     if params[:query].present?
       @stores = Store.search_field(params[:query])
+    elsif params[:tag].present?
+      @stores = Store.tagged_with(params[:tag])
     else
       @stores = Store.all
     end
@@ -49,6 +52,14 @@ class StoresController < ApplicationController
     @order_users = Store.find(params[:id]).orders.where(collected: false).map { |order| order.user }.uniq
   end
 
+  # def tagged
+  #   if params[:tag].present?
+  #     @stores = Store.tagged_with(params[:tag])
+  #   else
+  #     @stores = Store.all
+  #   end
+  # end
+
   private
 
   def current_orders
@@ -56,7 +67,7 @@ class StoresController < ApplicationController
   end
 
   def stores_params
-    params.require(:store).permit(:name, :address, :description, :photo)
+    params.require(:store).permit(:name, :address, :description, :photo, tag_list: [])
   end
 
   def item_params
