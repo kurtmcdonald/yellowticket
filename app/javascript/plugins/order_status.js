@@ -6,15 +6,31 @@
     // Make changes here ( classes etc )
 
 const find_status = () => {
-  const status = document.getElementById("order-status")
+  const status = document.getElementById("order-status");
+  const collected = document.querySelector(".confirmation-collected");
+  const my_default = document.querySelector(".confirmation-default");
+  const rejected = document.querySelector(".confirmation-rejected");
   if (status) {
-    setTimeout( function() {
+    window.setInterval( function() {
       fetch('/check-status', { headers: {accept: "application/json" } })
         .then(response => response.json())
         .then((data) => {
-          console.log(data.status)
+          if (data.status === "collected") {
+            my_default.style.display = "none";
+            rejected.style.display = "none";
+            collected.style.display = "block";
+          } else if (data.status === "rejected") {
+            my_default.style.display = "none";
+            collected.style.display = "none";
+            rejected.style.display = "block";
+          } else {
+            my_default.style.display = "block";
+            my_default.innerHTML = data.status;
+            collected.style.display = "none";
+            rejected.style.display = "none";
+          }
         });
-    }, 1000);
+    }, 2000);
   }
 }
 
