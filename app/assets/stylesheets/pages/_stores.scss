@@ -1,13 +1,38 @@
+.container {
+  font-family: Lora;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.store-name{
+  color: #343B48;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+
+.store-address {
+  font-style: italic;
+  font-weight: 400;
+}
+
 .store-items {
+  font-family: Lora;
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  height: 270px;
+  height: 280px;
   background: #fff;
   border-radius: 5px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
+
 .store-body {
+  font-family: Lora;
   background-color: #f8f8ff;
   width: 350px;
   height: 100px;
@@ -25,6 +50,7 @@
 }
 
 .card-item {
+  font-family: Lora;
   height: 250px;
   width: 250px;
   background: white;
@@ -39,26 +65,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.3s;
 }
 .card-item:hover {
   opacity: .7;
 }
 .card-product {
+  font-family: Lora;
   overflow: hidden;
   background: white;
   display: flex;
   align-items: center;
 }
 .item-name {
+  font-family: Lora;
   font-size: 1rem;
   font-weight: bold;
   color: #353b48;
 }
-h1,
-h2,
-h3,
-p,
- {
-  color: #353B48;
-  text-transform: none;
-}
+

@@ -4,7 +4,6 @@
 /* HOW IT WORKS */
 /*--------------------------------------*/
 
-
 .section-steps {
   background-color: #f4f4f4;
 }
@@ -26,7 +25,7 @@
   width: 16%;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 479px) {
   .app-screen {
   width: 25%;
   margin-right: -35px;
@@ -100,7 +99,7 @@
 
 
 /*--------------------------------------*/
-/* STATEMENT MISSION */
+/* ABOUT US SECTION */
 /*--------------------------------------*/
 
 .statement-header {
@@ -145,12 +144,13 @@
 
 .cards__item {
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
   @media(min-width: 40rem) {
     width: 50%;
   }
   @media(min-width: 64rem) {
     width: 33.3333%;
+
   }
 }
 
