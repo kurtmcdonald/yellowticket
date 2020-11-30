@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :stores, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :items, through: :orders
+
+  def order_status
+    orders.last&.status
+  end
 end

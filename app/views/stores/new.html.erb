@@ -2,7 +2,7 @@
   <h1>Create a store</h1>
   <%= simple_form_for @store do |f| %>
     <%= f.input :name %>
-    <%= f.input :address %>
+    <%= f.input :address, :html => {:id => 'store_address'} %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>
     <%= f.submit class: "btn-login-form" %>
