@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get "confirmation", to: "orders#confirmation", as: :confirmation
       post "add_item", to: "stores#add_item", as: :add_item
       get "orders", to: "stores#orders"
+      # get "tagged", to: "stores#tagged", as: :tagged 
       patch "checkout", to: "orders#checkout"
       patch "orders/:user_id/accepted", to: "orders#accept", as: :accept_order
       patch "orders/:user_id/rejected", to: "orders#reject", as: :reject_order
