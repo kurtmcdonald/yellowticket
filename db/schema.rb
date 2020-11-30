@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_11_30_103808) do
 
-ActiveRecord::Schema.define(version: 2020_11_30_103526) do
+
 
 
 
