@@ -12,10 +12,12 @@
       <li class="nav-item active">
         <%= link_to "Home", root_path%>
       </li>
-      <% if current_user && current_user.owner %>
+      <% if current_user&.owner %>
+      <% if current_user.stores.any? %>
       <li class="nav-item ">
         <%= link_to "Orders", orders_store_path(current_user.stores.first.id) %>
       </li>
+      <% end %>
       <li class="nav-item ">
         <%= link_to "Create a store", new_store_path %>
       </li>
