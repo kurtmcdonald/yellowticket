@@ -10,6 +10,7 @@ class StoresController < ApplicationController
   end
 
   def show
+    @orders = Order.where(user: current_user, collected: false, status: ["pending"])
     @item = Item.new
     @store = Store.find(params[:id])
     @count = 0
@@ -46,7 +47,14 @@ class StoresController < ApplicationController
   end
 
   def orders
-    @order_users = Store.find(params[:id]).orders.where(collected: false).map { |order| order.user }.uniq
+    @users_with_accepted_orders = User
+      .joins(orders: :item)
+      .where(orders: { status: 'accepted', collected: false, items: { store: Store.find(params[:id]) } }).uniq
+
+    @users_with_checkout_orders = User
+      .joins(orders: :item)
+      .where(orders: { status: 'checkout', collected: false, items: { store: Store.find(params[:id]) } }).uniq
+    # @order_users = Store.find(params[:id]).orders.where(collected: false, status: ["checkout", "accepted"]).map { |order| order.user }.uniq
   end
 
   private

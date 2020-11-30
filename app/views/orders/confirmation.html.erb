@@ -8,6 +8,18 @@
 </div>
 
 <div class="container">
+  <% if @status == "collected" %>
+    <p>Your order has been marked as collected:</p>
+    <%= link_to "Go back to my feed", stores_path %>
+  <% elsif @status == "rejected" %>
+    <p>We apologise <%= @store.name %> could not complete your order.</p>
+    <%= link_to "Go back to your feed", stores_path %>
+  <% else %>
+    <p>Order status: <%= @status %></p>
+  <% end %>
+</div>
+
+<div class="container">
   <div id="map"
      style="width: 100%; height: 400px;"
      data-markers="<%= @markers.to_json %>"
