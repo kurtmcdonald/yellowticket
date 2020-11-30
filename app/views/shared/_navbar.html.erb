@@ -32,13 +32,14 @@
       <li class="nav-item">
         <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
-        <% else %>
-        <%= link_to "Sign In", new_user_session_path, class: "" %>
-        <% end %>
-      </li>
       <li class="nav-item">
         <a id="brand-color" href="#">Total savings £23.50</a>
       </li>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path, class: "" %>
+        <% end %>
+      </li>
+
       <li class="nav-item active">
         <a href="#"><i id="brand-color" class="fas fa-globe-americas" style="font-size: 20px"></i></a>
       </li>

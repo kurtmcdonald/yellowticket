@@ -70,3 +70,44 @@
 
   }
 }
+
+.pulse {
+  z-index: 1;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  max-width: 20rem;
+
+  circle {
+    fill: #ff5154;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 2s cubic-bezier(.5,.5,0,1);
+
+    &:nth-child(2) {
+      fill: #7fc6a4;
+      animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1);
+    }
+
+    &:nth-child(3) {
+      fill: #e5f77d;
+      animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1);
+    }
+
+  }
+
+}
+
+@keyframes pulse {
+
+  25% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}

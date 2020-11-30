@@ -23,16 +23,6 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-});
-
-// app/javascript/packs/application.js
 import { initMapbox } from '../plugins/init_mapbox';
 import { find_status } from '../plugins/order_status'
 
@@ -41,4 +31,17 @@ document.addEventListener('turbolinks:load', () => {
   find_status();
 })
 
-// import status refresh js file from plugins (create file)
+import { initAutocomplete } from '../plugins/init_autocomplete';
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+  initAutocomplete();
+})
+
+//sweet alert
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#sweet-alert-demo', {
+  title: "A nice alert",
+  text: "This is a great alert, isn't it?",
+  icon: "success"
+});
