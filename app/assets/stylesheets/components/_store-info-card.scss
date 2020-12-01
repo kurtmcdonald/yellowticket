@@ -1,15 +1,16 @@
 .store-info-container {
-  width: 50vw;
+  width: 860px;
   background-color: white;
   border-radius: 10px;
   margin-left: 20px;
   box-shadow: 15px 15px 10px rgb(227, 227, 227);
   font-size: 16px;
   display: flex;
+  overflow: hidden;
 
   .empty-image {
     min-height: 100%;
-    width: 50vw;
+    width: 30vw;
     background-color: gray;
     display: flex;
     align-items: center;
@@ -19,7 +20,7 @@
   }
 
   .store-image {
-    width: 70vw;
+    width: 350px;
     min-height: 100%;
     background-position: 35% 35%;
     background-size: cover;
@@ -28,7 +29,7 @@
 
   .store-info {
     padding: 20px;
-    min-width: 30vw;
+    min-width: 500px;
   }
 
   h3 {
