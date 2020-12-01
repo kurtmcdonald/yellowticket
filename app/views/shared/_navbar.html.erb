@@ -32,9 +32,20 @@
       <li class="nav-item">
         <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a id="brand-color" href="#">Total savings £23.50</a>
-      </li>
+      </li> -->
+        <% sum = 0 %>
+        <% discounted_sum = 0 %>
+        <% current_user.orders.each do |order| %>
+          <% sum += order.item.price * order.quantity %>
+            <% discounted_sum += order.item.discounted_price * order.quantity%>
+        <% end %>
+       <li class="nav-item">
+       <p id="brand-color" >Total savings <%= number_to_currency( sum - discounted_sum, unit: "£") %> </p>
+       </li> 
+
+      
       <% else %>
         <%= link_to "Sign In", new_user_session_path, class: "" %>
         <% end %>
