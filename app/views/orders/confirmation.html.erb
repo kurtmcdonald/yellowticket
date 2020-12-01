@@ -1,25 +1,20 @@
 <br>
 <br>
 
-<div class="container mt-5 text-center">
-  <h2 class="pending pulsate"><%=@store.name%> will confirm your order... <i class="far fa-clock"></i></h2>
-  <h2 class="wait"><%=@store.name%> has confirmed your order... <i class="far fa-check-circle"></i></h3>
-  <h2 class="wait">Your order is ready to be collected! <i class="fas fa-walking"></i></h4>
+<div class="test_scroll">
+  <section id="display">
+    <div id="container">
+      <div class="mt-4 confirmation_item active"><i class="far fa-clock"></i><%=@store.name%> will confirm your order... </div>
+      <div class="mt-4 confirmation_item"><i class="far fa-check-circle"></i><%=@store.name%> has confirmed your order... </div>
+      <div class="mt-4 confirmation_item"><i class="fas fa-walking"></i>Your order has been marked as collected! </div>
+      <!-- <div class="mt-4 btn btn-primary" id="go-back">Go back to my feed</div> -->
+      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn btn-primary", id: "go-back" %>
+      <div class="mt-4 btn btn-primary hidden">Show this code to owner</div>
+    </div>
+  </section>
 </div>
 
-<div id="order-status" class="container">
-  <div class="confirmation-collected" style="display: none;">
-    <p>Your order has been marked as collected:</p>
-    <%= link_to "Go back to my feed", stores_path %>
-  </div>
-  <div class="confirmation-rejected" style="display: none;">
-    <p>We apologise <%= @store.name %> could not complete your order.</p>
-    <%= link_to "Go back to your feed", stores_path %>
-  </div>
-  <div class="confirmation-default" style="display: none;">
-    <p>Order status: <%= @status %></p>
-  </div>
-</div>
+<div class="p-3" style="background-color: #353B48"></div>
 
 <div class="container">
   <div id="map"
@@ -27,7 +22,8 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-  <div class="col mt-5">
+
+  <div class="col mt-5 hidden">
     <%= RQRCode::QRCode.new(root_path).as_svg(
       offset: 0,
       color: '000',
@@ -37,3 +33,6 @@
     ).html_safe %>
   </div>
 </div>
+
+
+

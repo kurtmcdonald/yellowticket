@@ -24,7 +24,8 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
-import { find_status } from '../plugins/order_status';
+
+import { find_status, test_scroll } from '../plugins/confirmation_page';
 import { toggleSpinner} from './spinner';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
