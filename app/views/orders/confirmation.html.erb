@@ -1,34 +1,45 @@
 <br>
 <br>
 
-<div class="container mt-5 text-center">
-  <h2 class="pending pulsate"><%=@store.name%> will confirm your order... <i class="far fa-clock"></i></h2>
-  <h2 class="wait"><%=@store.name%> has confirmed your order... <i class="far fa-check-circle"></i></h3>
-  <h2 class="wait">Your order is ready to be collected! <i class="fas fa-walking"></i></h4>
+<!-- <div class="container mt-5">
+  <div id="order-status" class="order-status-container text-center">
+    <h2 id="checkout" class="pulsate"><i class="far fa-clock"></i><%#=@store.name%> will confirm your order... </h2>
+    <div class="pending_dots">
+      <i class="fas fa-circle waiting-circle"></i>
+      <i class="fas fa-circle waiting-circle not_active"></i>
+      <i class="fas fa-circle waiting-circle not_active"></i>
+    </div>
+    <h2 id="accepted"><i class="far fa-check-circle"></i><%#=@store.name%> has confirmed your order... </h2>
+    <div class="pending_dots hidden">
+      <i class="fas fa-circle waiting-circle"></i>
+      <i class="fas fa-circle waiting-circle not_active"></i>
+      <i class="fas fa-circle waiting-circle not_active"></i>
+    </div>
+    <h2 id="collected"><i class="fas fa-walking"></i>Your order has been marked as collected! </h2>
+    <%#= link_to "Return to My Feed", stores_path, id: "return", class: "return" %>
+  </div>
+</div> -->
+
+<div class="test_scroll">
+  <section id="display">
+    <div id="container">
+      <div class="mt-4 confirmation_item active"><i class="far fa-clock"></i><%=@store.name%> will confirm your order... </div>
+      <div class="mt-4 confirmation_item"><i class="far fa-check-circle"></i><%=@store.name%> has confirmed your order... </div>
+      <div class="mt-4 confirmation_item"><i class="fas fa-walking"></i>Your order has been marked as collected! </div>
+    </div>
+  </section>
 </div>
 
-<div id="order-status" class="container">
-  <div class="confirmation-collected" style="display: none;">
-    <p>Your order has been marked as collected:</p>
-    <%= link_to "Go back to my feed", stores_path %>
-  </div>
-  <div class="confirmation-rejected" style="display: none;">
-    <p>We apologise <%= @store.name %> could not complete your order.</p>
-    <%= link_to "Go back to your feed", stores_path %>
-  </div>
-  <div class="confirmation-default" style="display: none;">
-    <p>Order status: <%= @status %></p>
-  </div>
-</div>
+<div class="p-3" style="background-color: #353B48"></div>
 
-<div class="container">
+<!-- <div class="container">
   <div id="map"
      style="width: 100%; height: 400px;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <div class="col mt-5">
-    <%= RQRCode::QRCode.new(root_path).as_svg(
+    <%#= RQRCode::QRCode.new(root_path).as_svg(
       offset: 0,
       color: '000',
       shape_rendering: 'crispEdges',
@@ -36,4 +47,11 @@
       standalone: true
     ).html_safe %>
   </div>
-</div>
+</div> -->
+<!-- <div id="button_scroll" class="m-4 btn btn-primary">Click Me</div>
+
+<div class="test_resize">
+  <p id="resize_test" class="off">This is some test text</p>
+</div> -->
+
+

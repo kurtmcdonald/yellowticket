@@ -24,11 +24,13 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
-import { find_status } from '../plugins/order_status'
+import { waitingDots, find_status, test_scroll, testResize } from '../plugins/confirmation_page';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   find_status();
+  waitingDots();
+  testResize();
 })
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
