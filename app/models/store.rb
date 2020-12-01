@@ -11,7 +11,7 @@ class Store < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_field,
-    against: [ :name ],
+    against: [ :name, :address ],
     associated_against: {
       items: [ :name ]
     },
