@@ -30,7 +30,7 @@
       <div class="basket-total">
         <div class="total">Total:</div>
         <div class="price">
-          <span class="old-price">£<%= sum %></span>
+          <span class="old-price"><%= number_to_currency(sum, unit: "£") %></span>
           <i class="fas fa-arrow-right"></i>
           <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
         </div>
