@@ -45,7 +45,7 @@
           <%= link_to "Delete",
                   destroy_item_store_path(@store.id, item.id),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+                  data: { confirm: "Are you sure?" }, class: "btn-delete" %>
         </div>
       </div>
         <% if current_user != @store.user %>
