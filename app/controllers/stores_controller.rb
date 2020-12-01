@@ -71,7 +71,6 @@ class StoresController < ApplicationController
     @users_with_checkout_orders = User
       .joins(orders: :item)
       .where(orders: { status: 'checkout', collected: false, items: { store: Store.find(params[:id]) } }).uniq
-    # @order_users = Store.find(params[:id]).orders.where(collected: false, status: ["checkout", "accepted"]).map { |order| order.user }.uniq
   end
 
   # def tagged
