@@ -42,6 +42,10 @@
           <span class="old-price"><%= number_to_currency(item.price, unit: "£") %></span>
           <i class="fas fa-arrow-right"></i>
           <span><%=number_to_currency(item.discounted_price, unit: "£") %></span>
+          <%= link_to "Delete",
+                  destroy_item_store_path(@store.id, item.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
         </div>
       </div>
         <% if current_user != @store.user %>

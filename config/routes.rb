@@ -5,8 +5,10 @@ Rails.application.routes.draw do
     member do
       get "confirmation", to: "orders#confirmation", as: :confirmation
       post "add_item", to: "stores#add_item", as: :add_item
+      delete "destroy_item/:item_id", to: "stores#destroy_item", as: :destroy_item
+
       get "orders", to: "stores#orders"
-      # get "tagged", to: "stores#tagged", as: :tagged 
+      # get "tagged", to: "stores#tagged", as: :tagged
       patch "checkout", to: "orders#checkout"
       patch "orders/:user_id/accepted", to: "orders#accept", as: :accept_order
       patch "orders/:user_id/rejected", to: "orders#reject", as: :reject_order
