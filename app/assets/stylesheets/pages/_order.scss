@@ -1,3 +1,36 @@
 .margin {
   margin-top: 85px;
 }
+
+.margin-order {
+  margin-top: 150px;
+}
+
+
+.orders-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 12px;
+    flex-grow: 1;
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.order-card {
+    padding: 0px 15px 10px 15px;
+    background-color: white;
+    padding-top: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px #e0e0e0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+   a {
+    text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
+   }
+}
