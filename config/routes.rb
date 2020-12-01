@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  patch "edit/:item_id", to: "stores#edit_item", as: :edit_item
   post "/orders/:item_id", to: "orders#create", as: :create_order
   patch "/orders/clear", to: "orders#clear", as: :clear_orders
   get "/check-status", to: "orders#check_status"
