@@ -6,18 +6,18 @@
 
 
   <div>
-  <%= link_to "See All", stores_path %>
+  <%= link_to "See All (#{Store.count})", stores_path, class: "btn btn-full" %>
   </div>
   <div class="store-cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
-     <h3 class="suggestion-text"></h3> 
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/delicious-fluffy-pancake-frying-pan-fresh-fruit-honey-toppings-white-background_281653-997.jpg)">
+     <h3 class="suggestion-text"></h3>
      <%= link_to "Breakfast", stores_path(tag: @tags.first), class: "suggestion-text" %>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1478998674531-cb7d22e769df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/delicious-ramen-soup-background_52683-46005.jpg)">
      <h3 class="suggestion-text"></h3>
      <%= link_to "Lunch", stores_path(tag: @tags.second), class: "suggestion-text" %>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/realistic-kitchen-ware-top-view-with-salmon-spices-vegetables-wooden-texture-illustration_1284-28232.jpg)">
       <h3 class="suggestion-text"></h3>
       <%= link_to "Dinner", stores_path(tag: @tags.last), class: "suggestion-text" %>
     </div>
@@ -30,7 +30,7 @@
     <div class="store-title">
       <h3> <%= link_to store.name, store_path(store.id), class: "store-name" %></h3>
     <p class="store-address"> <%= store.address %> </p></div>
-  <div class="card-product">
+  <div class="card-product background-shade">
     <div class="store-items">
        <% store.items.each do |item| %>
     <div class="card-item">
@@ -43,9 +43,8 @@
           <div class="item-name" ><%= item.name %></div>
           <s>Original Price:<%= number_to_currency(item.price, unit: "£") %></s>
           <br>
-          <strong> New Price: <%= number_to_currency(item.discounted_price, unit: "£") %></strong>
+          <strong id="new-price"> New Price: <%= number_to_currency(item.discounted_price, unit: "£") %></strong>
           <%= link_to "Add to Basket", create_order_path(item.id), method: :post, class: "btn-basket" %>
-          <i class="fas fa-shopping-basket"></i>
         </div>
     </div>
     <% end %>
@@ -53,6 +52,3 @@
   </div>
   <% end %>
 </div>
-
-
-

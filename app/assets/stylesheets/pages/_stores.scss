@@ -13,8 +13,6 @@
 }
 
 
-
-
 .store-address {
   font-style: italic;
   font-weight: 400;
@@ -26,7 +24,6 @@
   width: 100%;
   overflow-x: scroll;
   height: 280px;
-  background: #fff;
   border-radius: 5px;
   margin-bottom: 25px;
 }
@@ -41,6 +38,7 @@
   min-height: 1px;
   padding: 1.25rem;
   width: 250px;
+  border-radius: 0 0 10px 10px ;
 }
 .card-image {
   height: 100px;
@@ -67,20 +65,25 @@
   align-items: center;
   transition: 0.3s;
 }
+
 .card-item:hover {
   opacity: .7;
 }
+
 .card-product {
   font-family: Lora;
   overflow: hidden;
-  background: white;
   display: flex;
   align-items: center;
 }
+
 .item-name {
   font-family: Lora;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #353b48;
 }
 
+#new-price {
+  color: #FB5159;
+}
