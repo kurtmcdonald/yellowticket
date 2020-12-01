@@ -37,7 +37,7 @@
       </li> -->
         <% sum = 0 %>
         <% discounted_sum = 0 %>
-        <% current_user.orders.each do |order| %>
+        <% current_user.orders.where(status: ["accepted", "collected"]).each do |order| %>
           <% sum += order.item.price * order.quantity %>
             <% discounted_sum += order.item.discounted_price * order.quantity%>
         <% end %>
