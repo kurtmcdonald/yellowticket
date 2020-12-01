@@ -42,6 +42,19 @@ class StoresController < ApplicationController
     redirect_back(fallback_location: :stores_path)
   end
 
+  def destroy_item
+    # Going to need authorisation on these actions
+    @item = Item.find(params[:item_id])
+    @item.destroy
+    redirect_back(fallback_location: :stores_path)
+  end
+
+  def edit_item
+    @item = Item.find(params[:item_id])
+    @item.update(item_params)
+    redirect_back(fallback_location: :stores_path)
+  end
+
   def update
     # Going to need authorisation on these actions
     @store = Store.find(params[:id])
