@@ -162,6 +162,14 @@
   background-color: #FECD1A;
   border: 1px solid #FECD1A;
   color: #353B48;
+  transition: 0.3s;
+}
+
+.btn-basket:hover,
+.btn-basket:active, {
+  text-decoration: none;
+  font-weight: bold;
+  color: #353B48;
 }
 
 .btn-delete {
@@ -187,6 +195,11 @@
   margin-bottom: 10px;
 }
 
+.delete_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 /*--------------------------------------*/
 /* ACCEPT/REJECT BUTTON ON ORDERS PAGE*/
 /*--------------------------------------*/
