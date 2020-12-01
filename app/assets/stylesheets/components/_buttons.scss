@@ -142,11 +142,22 @@
 }
 
 .btn-delete {
-  padding: 5px 10px;
+  padding: 4px 8px;
   background-color: #FB5159;
   color: white;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 2px 1px #F2424B;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-delete:hover,
+.btn-delete:active,
+{
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
 .show-discount {
