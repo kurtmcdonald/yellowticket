@@ -9,8 +9,7 @@
   overflow: hidden;
 
   .empty-image {
-    min-height: 100%;
-    width: 30vw;
+    width: 350px;
     background-color: gray;
     display: flex;
     align-items: center;
@@ -29,14 +28,23 @@
 
   .store-info {
     padding: 20px;
-    min-width: 500px;
+    min-width: 400px;
   }
+
 
   h3 {
     font-size: 20px;
   }
 }
 
+.store-info p {
+  // overflow: scroll;
+  overflow: hidden;
+   display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 400px;
+}
 
 
 // Media Queries for grids

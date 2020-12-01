@@ -6,6 +6,9 @@ class Store < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :orders, through: :items, dependent: :destroy
   has_one_attached :photo
+  # validates :bio, length: { maximum: 200,
+  #   too_long: "%{count} characters is the maximum allowed for your store description" }
+  # validates :name, :address, :description, presence: true
 
   acts_as_taggable_on :tags
 
