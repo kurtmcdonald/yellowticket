@@ -117,11 +117,19 @@
 
 .add-item-btn,
 .edit-btn {
-  width: 100%;
-}
-
-.add-item-btn {
-  margin-top: 5px;
+  padding: 6px 10px;
+  background-color: #FB5159;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 1px #F2424B;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  border: #FB5159;
+  width: 150px;
+  margin-left: 160px;
+  position: relative;
 }
 
 /*--------------------------------------*/
