@@ -36,18 +36,23 @@
         <div class="empty-image"></div>
       <% end %>
 
+      <div class="delete_btn">
+        <% if  current_user == @store.user %>
+          <%= link_to "Delete",
+            destroy_item_store_path(@store.id, item.id),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn-delete" %>
+        <% end %>
+      </div>
+
       <div class="item-info">
-        <div><strong><%= item.name %></strong> </div>
+        <div>
+          <strong><%= item.name %></strong>
+        </div>
         <div class="item-card-prices">
           <span class="old-price"><%= number_to_currency(item.price, unit: "£") %></span>
           <i class="fas fa-arrow-right"></i>
           <span><%=number_to_currency(item.discounted_price, unit: "£") %></span>
-          <% if  current_user == @store.user %>
-            <%= link_to "Delete",
-                    destroy_item_store_path(@store.id, item.id),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" }, class: "btn-delete" %>
-          <% end %>
         </div>
       </div>
 
