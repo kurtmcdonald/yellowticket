@@ -8,6 +8,7 @@
   position: fixed;
   top: 120px;
   right: 11%;
+  z-index: 1;
 
   .basket-header {
     display: flex;
@@ -78,6 +79,7 @@
   position: fixed;
   top: 120px;
   right: 11%;
+  z-index: 1;
 
   .basket-header {
     display: none;
@@ -178,6 +180,10 @@
 }
 
 @media(max-width: 576px) {
+  .basket-container {
+    background-color: #E4E4E4;
+  }
+
   .basket-container-scrolled,
   .basket-container {
     position: fixed;

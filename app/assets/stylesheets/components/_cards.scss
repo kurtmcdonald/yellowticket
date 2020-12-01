@@ -2,9 +2,11 @@
   font-family: Lora;
   font-size: 16px;
   background-color: white;
+  position: relative;
   width: 200px;
   border-radius: 10px;
   box-shadow: 15px 15px 10px rgb(227, 227, 227);
+  z-index: 0;
 
   .empty-image {
     background-color: gray;
@@ -27,6 +29,7 @@
     padding: 10px;
     line-height: 40px;
     margin-left: -10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -43,6 +46,10 @@
     justify-content: space-between;
     width: 100%;
     padding: 0;
+
+    .item-card-prices {
+      margin-bottom: 0px;
+    }
   }
 
   .empty-image {
@@ -56,4 +63,5 @@
   .item-info {
     padding: 0;
   }
+
 }

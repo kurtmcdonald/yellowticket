@@ -52,7 +52,8 @@ class StoresController < ApplicationController
   def edit_item
     @item = Item.find(params[:item_id])
     @item.update(item_params)
-    redirect_back(fallback_location: :stores_path)
+    # redirect_back(fallback_location: :stores_path, anchor: "item-#{@item.id}")
+    redirect_to(store_path(@item.store, anchor: "item-#{@item.id}"))
   end
 
   def update
@@ -70,7 +71,6 @@ class StoresController < ApplicationController
     @users_with_checkout_orders = User
       .joins(orders: :item)
       .where(orders: { status: 'checkout', collected: false, items: { store: Store.find(params[:id]) } }).uniq
-    # @order_users = Store.find(params[:id]).orders.where(collected: false, status: ["checkout", "accepted"]).map { |order| order.user }.uniq
   end
 
   # def tagged

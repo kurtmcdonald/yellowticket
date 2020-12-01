@@ -27,9 +27,12 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 import { find_status, test_scroll } from '../plugins/confirmation_page';
 import { toggleSpinner} from './spinner';
+import { edit_item } from '../plugins/edit_item';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
+
 document.addEventListener('turbolinks:load', () => {
+  edit_item();
   initMapbox();
   initAutocomplete();
   find_status();
