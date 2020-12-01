@@ -52,7 +52,8 @@ class StoresController < ApplicationController
   def edit_item
     @item = Item.find(params[:item_id])
     @item.update(item_params)
-    redirect_back(fallback_location: :stores_path)
+    # redirect_back(fallback_location: :stores_path, anchor: "item-#{@item.id}")
+    redirect_to(store_path(@item.store, anchor: "item-#{@item.id}"))
   end
 
   def update

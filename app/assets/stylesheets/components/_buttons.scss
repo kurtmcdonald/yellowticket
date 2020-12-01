@@ -46,6 +46,7 @@
   background-color: #495365;
 }
 
+
 @media only screen and (max-width: 429px) {
   .btn-full:link,
   .btn-full:visited,
@@ -70,10 +71,13 @@
   background-color: #495365;
   border-radius: 0 0 10px 10px;
   text-decoration: none;
+  width: 100%;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  position: absolute;
+  bottom: 0px;
   a {
     color: white;
     font-weight: bold;
