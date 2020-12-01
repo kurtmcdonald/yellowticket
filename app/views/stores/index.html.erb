@@ -31,7 +31,7 @@
 </div>
 
 <div class="container">
-  <h2>All stores near you</h2>
+  <h2>Stores near you</h2>
   <% @stores.each do |store| %>
     <div class="store-title">
       <h3> <%= link_to store.name, store_path(store.id), class: "store-name" %></h3>
