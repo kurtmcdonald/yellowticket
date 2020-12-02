@@ -4,33 +4,43 @@
   <h2>Waiting for collection...</h2>
 </div>
 
-<div class="orders-container mt-3">
-  <% @users_with_accepted_orders.each do |user| %>
-  <div class="order-card">
-    <h2> <%= user.first_name.capitalize %>'s order </h2>
-    <% user.orders.accepted.each do |order| %>
-      <p class="text-center"><%= order.item.name %> x<%= order.quantity %></p>
-    <% end %>
-      <%= link_to "Order Collected?", collect_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure all items were collected?" }, class: "mt-auto btn btn-full" %>
+<% if @users_with_accepted_orders.empty? %>
+  <div class="text-center w-100 p-3">There are no awaiting orders</div>
+<% else %>
+  <div class="orders-container mt-3">
+    <% @users_with_accepted_orders.each do |user| %>
+    <div class="order-card">
+      <h2> <%= user.first_name.capitalize %>'s order </h2>
+      <% user.orders.accepted.each do |order| %>
+        <p class="text-center"><%= order.item.name %> x<%= order.quantity %></p>
+      <% end %>
+        <%= link_to "Order Collected?", collect_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure all items were collected?" }, class: "mt-auto btn btn-full" %>
+    </div>
+      <% end %>
+    <br>
   </div>
-    <% end %>
-  <br>
-</div>
+<% end %>
+
 
 <div class="container text-center mt-3">
   <h2>Pending orders...</h2>
 </div>
 
-<div class="orders-container mt-3">
-    <% @users_with_checkout_orders.each do |user| %>
-    <div class="order-card">
-      <h2> <%= user.first_name.capitalize %>'s order </h2>
-      <% user.orders.checkout.each do |order| %>
-        <p class="text-center"><%= order.item.name %> x<%= order.quantity %></p>
+<% if @users_with_checkout_orders.empty? %>
+  <div class="text-center w-100 p-3">There are no pending orders</div>
+<% else %>
+  <div class="orders-container mt-3">
+      <% @users_with_checkout_orders.each do |user| %>
+      <div class="order-card">
+        <h2> <%= user.first_name.capitalize %>'s order </h2>
+        <% user.orders.checkout.each do |order| %>
+          <p class="text-center"><%= order.item.name %> x<%= order.quantity %></p>
+        <% end %>
+          <%= link_to "Accept", accept_order_store_path(params[:id], user.id), method: "patch", class: "mt-auto btn-accept text-center" %>
+          <%= link_to "Reject", reject_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure want to reject this order?" }, class: "mt-3 btn-reject text-center" %>
+      </div>
       <% end %>
-        <%= link_to "Accept", accept_order_store_path(params[:id], user.id), method: "patch", class: "mt-auto btn-accept text-center" %>
-        <%= link_to "Reject", reject_order_store_path(params[:id], user.id), method: "patch", data: { confirm: "Are you sure want to reject this order?" }, class: "mt-3 btn-reject text-center" %>
-    </div>
-    <% end %>
-    <br>
-</div>
+      <br>
+  </div>
+<% end %>
+
