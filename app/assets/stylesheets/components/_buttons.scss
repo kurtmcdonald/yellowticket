@@ -336,3 +336,50 @@
   -o-animation: reject 1500ms infinite;
   animation: reject 1500ms infinite;
 }
+
+.btn-form-back {
+  color: #FECD1A;
+  background-color: #353B48;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  margin-left: 8px;
+  box-shadow: 2px 1px #767676;
+  transition: 0.3s;
+
+}
+
+.btn-form-back:hover,
+.btn-form-back:active
+{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-back-1:link,
+.btn-back-1:visited,
+{
+  display: inline-block;
+  padding: 6px 18px;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn-back-1:link,
+.btn-back-1:visited,
+{
+  background-color: #353B48;
+  border: 1px solid #353B48;
+  color: #FECD1A;
+  margin-right: 15px;
+}
+
+.btn-back-1:hover,
+.btn-back-1:active,
+{
+  border: 1px solid #495365;
+  background-color: #495365;
+}
