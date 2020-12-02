@@ -12,15 +12,18 @@
 {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    padding: 4px;
-    transition: 0.2s;
+    border-bottom: 3px solid #FECD1A;
+    transition: 0.1s;
 }
 
 
 #brand-color
 {
   color: #FECD1A;
+}
+
+.progress-green {
+  background-color: #1EDD88!important;
 }
 
 #green {
@@ -30,8 +33,6 @@
 #grey {
   color: #a09b9b;
 }
-
-
 
 .navbar-lewagon {
   position: fixed;
@@ -56,11 +57,11 @@
 }
 
 .dropdown-item {
-  color: white;
+  color: white!important;
 }
 
 .dropdown-item:hover {
-  color: #353B48;
+  color: #353B48!important;
   text-decoration: none;
   background-color: white !important;
  }
