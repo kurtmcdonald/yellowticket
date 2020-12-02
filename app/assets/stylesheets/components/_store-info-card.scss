@@ -37,6 +37,24 @@
   }
 }
 
+@media(max-width: 1240px) {
+  .add-item-btn,
+  .edit-btn {
+    margin-bottom: 10px;
+    width: 150px;
+    margin-left: 210px;
+    position: relative;
+    }
+
+    .store-info-container {
+  width: 665px;
+}
+}
+
+
+
+
+
 .store-info p {
   // overflow: scroll;
   overflow: hidden;

@@ -69,6 +69,14 @@
   }
 }
 
+@media(max-width: 1240px) {
+  .basket-container {
+    top: 135px;
+    right: 5%;
+    }
+}
+
+
 .basket-container-scrolled {
   width: 300px;
   background-color: #353C48;
@@ -203,4 +211,11 @@
     }
   }
 
+}
+
+@media(max-width: 1240px) {
+  .basket-container-scrolled {
+    top: 65px;
+    right: 5%;
+    }
 }
