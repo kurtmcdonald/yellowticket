@@ -37,7 +37,13 @@ const find_status = () => {
             scroll_container.children[0].classList.remove('active');
             scroll_container.children[1].classList.remove('active');
             scroll_container.children[2].classList.add('active');
-            scroll_container.children[3].style.display = "inline-block";
+            scroll_container.children[4].style.display = "inline-block";
+          } else if (data.status === "rejected") {
+            scroll_container.children[0].style.display = "none";
+            scroll_container.children[1].style.display = "none";
+            scroll_container.children[2].style.display = "none";
+            scroll_container.children[3].style.display = "block";
+            scroll_container.children[4].style.display = "inline-block";
           }
         });
     }, 2000);
