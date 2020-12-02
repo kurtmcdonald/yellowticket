@@ -12,15 +12,15 @@ puts "Destroying All"
 User.destroy_all
 
 puts "Creating Users..."
-User.create(first_name: "boris", last_name: "johnson", email: "boris@test.com", password: "password")
-User.create(first_name: "tom", last_name: "cruise", email: "tom@test.com", password: "password")
-User.create(first_name: "morgan", last_name: "freeman", email: "morgan@test.com", password: "password")
-User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@test.com", password: "password")
-User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", password: "password")
+User.create(first_name: "boris", last_name: "johnson", email: "boris@test.com", password: "password", owner: true)
+User.create(first_name: "tom", last_name: "cruise", email: "tom@test.com", password: "password", owner: true)
+User.create(first_name: "morgan", last_name: "freeman", email: "morgan@test.com", password: "password", owner: true)
+User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@test.com", password: "password", owner: false)
+User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", password: "password", owner: false)
 
 addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "61-65 Kensington Church St, Kensington, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
 puts "Creating Stores"
-Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast") 
+Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast")
 Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second, tag_list: "Breakfast")
 Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
 Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
@@ -40,7 +40,7 @@ csv_options = {headers: :first_row}
 CSV.foreach(filepath, csv_options) do |row|
   store = Store.find_by(name: row["store_name"])
   file = URI.open(row["img_url"])
-  item = Item.new(store: store, name: row["name"],price: row["price"], discounted_price: row["discounted_price"]) 
+  item = Item.new(store: store, name: row["name"],price: row["price"], discounted_price: row["discounted_price"])
   item.photo.attach(io: file, filename: "#{item.id}-img.jpg", content_type: "image/jpg")
   item.save
   puts "created item"

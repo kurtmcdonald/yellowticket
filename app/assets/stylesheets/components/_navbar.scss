@@ -1,57 +1,21 @@
-/* Navbar section */
-.nav {
-    width: 100%;
-    height: 65px;
-    line-height: 65px;
-    text-align: center;
-    justify-content: space-between!important;
-}
+// /* Navbar section */
 
-.logo {
-    float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3rem;
-}
-
-.logo a {
+.nav-link {
     text-decoration: none;
-    color: #FECD1A;
-    font-size: 2.5rem;
-}
-
-.main_list {
-    height: 55px;
-    float: right;
-}
-
-.main_list ul {
-    width: 100%;
-    height: 65px;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main_list ul li {
-    width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 1.5rem;
-}
-
-.main_list ul li a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 65px;
-    font-size: 18px;
-    padding: 8px;
+    color: white;
+    font-size: 16px;
     transition: 0.2s;
+    margin-top: 8px;
 }
 
-.main_list ul li a:hover{
-  border-bottom: 3px solid #FECD1A;
+.nav-link:hover,
+.nav-link:hover
+{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    transition: 0.2s;
 }
 
 #brand-color
@@ -60,42 +24,70 @@
 }
 
 .navbar-lewagon {
-  justify-content: space-between!important;
+  position: fixed;
+  justify-content: space-between;
   background: #353B48;
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 55px;
-  z-index: 100;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+  flex-grow: 1;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 
-// .collapse {
-//    background: black;
-//    height: 316px;
+.navbar {
+  height: 60px;
+}
+
+
+// .navbar-lewagon {
+//   justify-content: space-between!important;
+//   background: #353B48;
+//   overflow: hidden;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 55px;
+//   z-index: 100;
 // }
 
-#brand-color {
-  margin-top: 20px;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-@media only screen and (max-width: 575px) {
-  .collapse {
-   background-color: #353B48;
-   height: 320px;
-}
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
 
-#header-img {
-  height: 40px;
-  width: 40px;
-  margin-left: 15px;
-}
+
+// #brand-color {
+//   margin-top: 21px;
+// }
+
+// .dropdown-menu{
+//   height: 300px;
+// }
+
+// @media only screen and (max-width: 575px) {
+//   .collapse {
+//    background-color: #353B48;
+//    height: 320px;
+// }
+// }
+
+// #header-img {
+//   height: 40px;
+//   width: 40px;
+//   margin-left: 15px;
+// }
+
+// .dropdown-menu {
+//   height: 360px;
+// }
+

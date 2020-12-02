@@ -1,47 +1,45 @@
 <%= javascript_pack_tag 'show_page_javascript' %>
 
 <div class="container">
-<% if @store.user == current_user %>
+  <% if @store.user == current_user %>
   <!-- The current user is the owner -->
-    <div class="show-header">
-      <%= render "shared/store-show-info-card" %>
-      <div class="edit-add-box">
-        <%= render "shared/show-edit-box" %>
-        <%= render "shared/add-item-modal" %>
-        <%= render "shared/edit-store-modal" %>
-      </div>
+  <div class="show-header">
+    <%= render "shared/store-show-info-card" %>
+    <div class="edit-add-box">
+      <%= render "shared/show-edit-box" %>
+      <%= render "shared/add-item-modal" %>
+      <%= render "shared/edit-store-modal" %>
     </div>
-<% else %>
+  </div>
+  <% else %>
   <!-- The current user is not the owner -->
-    <div class="show-header">
-      <%= render "shared/store-show-info-card" %>
-      <%= render "shared/basket" %>
-    </div>
-<% end %>
-
-
-<div class="items-header"><strong>Items:</strong></div>
-<% flash.each do |type, msg| %>
+  <div class="show-header">
+    <%= render "shared/store-show-info-card" %>
+    <%= render "shared/basket" %>
+  </div>
+  <% end %>
+  <div class="items-header"><strong>Items:</strong></div>
+  <% flash.each do |type, msg| %>
   <div class="p-3 m-2 alert-danger my-alert">
     <span><%= msg %></span>
     <span>Go back to: <%= link_to "#{@orders.last.item.store.name}", store_path(@orders.last.item.store), class: ".alert-link"%></span>
   </div>
-<% end %>
-<div class="show-items-grid">
-  <% @store.items.each do |item| %>
+  <% end %>
+  <div class="show-items-grid">
+    <% @store.items.each do |item| %>
     <div class="item-card" id="item-<%= item.id %>">
       <% if item.photo.attached? %>
-        <div class="item-img" style="background-image: url('<%= cl_image_path item.photo.key, height: 100, width: 100 %>')"></div>
+      <div class="item-img" style="background-image: url('<%= cl_image_path item.photo.key, height: 100, width: 100 %>')"></div>
       <% else %>
-        <div class="empty-image"></div>
+      <div class="empty-image"></div>
       <% end %>
 
       <div class="delete_btn">
         <% if  current_user == @store.user %>
-          <%= link_to "Delete",
-            destroy_item_store_path(@store.id, item.id),
-            method: :delete,
-            data: { confirm: "Are you sure?" }, class: "btn-delete" %>
+        <%= link_to "Delete",
+        destroy_item_store_path(@store.id, item.id),
+        method: :delete,
+        data: { confirm: "Are you sure?" }, class: "btn-delete" %>
         <% end %>
       </div>
 
@@ -58,28 +56,28 @@
 
       <div class="edit-item-form" style="display: none;">
         <%= simple_form_for item, :url => edit_item_path(item.id), remote: true do |f|%>
-           <div class="p-2">
-             <%= f.input :name %>
-            <div class="d-flex">
-             <%= f.input :price %>
-             <%= f.input :discounted_price, label: "Discounted" %>
-            </div>
-           </div>
-           <%= f.submit class: "btn btn-primary w-100 edit-item-submit" %>
-        <% end %>
-      </div>
-      <% if current_user != @store.user %>
-        <div class="add-to-basket-btn">
-          <%= link_to "Add to basket", create_order_path(item.id), method: :post %>
-        </div>
-      <% elsif current_user == @store.user %>
-        <div class="add-to-basket-btn" style="color: white;">
-          <div class="edit-item-btn" data-item_id="<%= item.id %>">Edit Item</div>
-        </div>
-      <% end %>
+        <div class="p-2">
+         <%= f.input :name %>
+         <div class="d-flex">
+           <%= f.input :price %>
+           <%= f.input :discounted_price, label: "Discounted" %>
+         </div>
+       </div>
+       <%= f.submit class: "btn btn-primary w-100 edit-item-submit" %>
+       <% end %>
+     </div>
+     <% if current_user != @store.user %>
+     <div class="add-to-basket-btn">
+      <%= link_to "Add to basket", create_order_path(item.id), method: :post %>
     </div>
-  <% end %>
+    <% elsif current_user == @store.user %>
+    <div class="add-to-basket-btn" style="color: white;">
+      <div class="edit-item-btn" data-item_id="<%= item.id %>">Edit Item</div>
+    </div>
+    <% end %>
   </div>
-  <%= link_to "Back", stores_path, class: "btn btn-full ml-3"  %>
+  <% end %>
+</div>
+<%= link_to "Back", stores_path, class: "btn btn-full ml-3"  %>
 </div>
 
