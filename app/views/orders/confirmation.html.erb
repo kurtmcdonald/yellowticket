@@ -1,6 +1,8 @@
 <br>
 <br>
 
+<div class="mt-4 confirmation-model-btn" data-toggle="modal" data-target="#showBasketModal"> <i class="fas fa-shopping-basket"></i></div>
+
 <div class="test_scroll">
   <section id="display">
     <div id="container">
@@ -8,7 +10,7 @@
       <div class="mt-4 confirmation_item"><i class="far fa-check-circle"></i><%=@store.name%> has confirmed your order... </div>
       <div class="mt-4 confirmation_item"><i class="fas fa-walking"></i>Your order has been marked as collected! </div>
       <div class="confirmation_item hidden " style="margin-top: -20px">We apologise but this store has declined your order. <br> Return to feed for more options.</div>
-      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn btn-full", id: "go-back" %>
+      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn-confirmation-feed", id: "go-back" %>
     </div>
   </section>
 </div>
@@ -17,7 +19,7 @@
 
 <div class="confirmation-btn-container">
 
-  <div class="btn btn-primary m-2 text-center" type="button" data-toggle="modal" data-target="#showBasketModal"> Show Basket </div>
+  <!-- <div class="btn btn-primary m-2 text-center" type="button" data-toggle="modal" data-target="#showBasketModal"> Show Basket </div> -->
   <div class="modal fade" id="showBasketModal" tabindex="-1" role="dialog" aria-labelledby="showBasketModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
