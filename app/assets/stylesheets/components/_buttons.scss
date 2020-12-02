@@ -325,3 +325,16 @@
   -o-animation: reject 1500ms infinite;
   animation: reject 1500ms infinite;
 }
+
+
+.active_order_link {
+  position: absolute;
+  z-index: 0.9;
+  top: 60px;
+  right: 0px;
+  width: auto;
+  border-radius: 0;
+}
+
+
+
