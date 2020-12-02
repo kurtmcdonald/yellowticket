@@ -38,3 +38,11 @@
 .hidden {
   display: none;
 }
+
+.confirmation-btn-container {
+  width: 350px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}

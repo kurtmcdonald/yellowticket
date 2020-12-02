@@ -1,8 +1,10 @@
-<% if current_user.orders.checkout.any? || current_user.orders.accepted.any? %>
-  <% if current_user.orders.checkout.any? %>
-    <% store = current_user.orders.checkout.first.store %>
-  <% elsif current_user.orders.accepted.any? %>
-    <% store = current_user.orders.accepted.first.store %>
+<% if current_user %>
+  <% if current_user.orders.checkout.any? || current_user.orders.accepted.any? %>
+    <% if current_user.orders.checkout.any? %>
+      <% store = current_user.orders.checkout.first.store %>
+    <% elsif current_user.orders.accepted.any? %>
+      <% store = current_user.orders.accepted.first.store %>
+    <% end %>
+    <%= link_to "You have current active order", confirmation_store_path(store), class: "edit-btn active_order_link" %>
   <% end %>
-  <%= link_to "You have current active order", confirmation_store_path(store), class: "edit-btn active_order_link" %>
 <% end %>

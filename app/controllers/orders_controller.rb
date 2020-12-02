@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
     @store = Store.find(params[:id])
     @markers = [{ lat: @store.latitude, lng: @store.longitude}]
     @status = current_user.order_status
+    @orders = Order.where(user: current_user, status: ["checkout", "accepted"])
   end
 
   def accept
