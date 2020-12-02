@@ -5,6 +5,8 @@ class OrdersController < ApplicationController
     order = Order.find_by(user: current_user, item: item, collected: false, status: "pending")
     if active_orders.any? && active_orders.last.item.store != item.store
       redirect_to store_path(item.store), notice: "You cannot add from two different stores."
+    elsif current_user.orders.accepted.any? || current_user.orders.checkout.any?
+      redirect_to store_path(item.store), notice: "You already have an active order."
     elsif order
       order.quantity += 1
       order.save
