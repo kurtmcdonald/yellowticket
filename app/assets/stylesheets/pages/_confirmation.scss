@@ -12,11 +12,11 @@
 } */
 
 
-.pulsate {
-    -webkit-animation: pulsate 1.2s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    opacity: 0.5;
-}
+// .pulsate {
+//     -webkit-animation: pulsate 1.2s ease-out;
+//     -webkit-animation-iteration-count: infinite;
+//     opacity: 0.5;
+// }
 @-webkit-keyframes pulsate {
     0% {
         opacity: 0.6;
@@ -59,6 +59,8 @@
   .active {
     color: orange;
     font-size: 30px;
+    -webkit-animation: pulsate 1.2s ease-out;
+    -webkit-animation-iteration-count: infinite;
   }
 
   #go-back {
