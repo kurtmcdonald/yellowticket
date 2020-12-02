@@ -19,7 +19,7 @@ const find_status = () => {
   // Items for the scrolling example:
   const scroll_container = document.getElementById('container');
   const map = document.getElementById("map");
-  if (container) {
+  if (scroll_container) {
     window.setInterval( function() {
       fetch('/check-status', { headers: {accept: "application/json" } })
         .then(response => response.json())

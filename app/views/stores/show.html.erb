@@ -81,7 +81,7 @@
       <%= link_to "Add to basket", create_order_path(item.id), method: :post %>
     </div>
     <% elsif current_user == @store.user %>
-    <div class="add-to-basket-btn" style="color: white;">
+    <div class="add-to-basket-btn">
       <div class="edit-item-btn" data-item_id="<%= item.id %>">Edit Item</div>
     </div>
     <% end %>
