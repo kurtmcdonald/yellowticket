@@ -1,0 +1,14 @@
+<div class="store-info-container-1">
+  <% if @store.photo.attached? %>
+    <div class="store-image-1" style="background-image: url('<%= cl_image_path @store.photo.key, height: 200 %>')"></div>
+  <% else %>
+    <div class="empty-image-1">Image Place Holder</div>
+  <% end %>
+  <div class="store-info-1">
+    <h1> <%= @store.name %></h1>
+    <h3> <%= @store.address %> </h3>
+    <p> <%= @store.description %></p>
+    <p> owner: <%= @store.user.email %></p>
+  </div>
+</div>
+

@@ -4,12 +4,11 @@
 <div class="test_scroll">
   <section id="display">
     <div id="container">
-      <div class="mt-4 confirmation_item active"><i class="far fa-clock"></i><%=@store.name%> will confirm your order... </div>
+      <div class="mt-4 confirmation_item active"><i class="far fa-clock"></i><%=@store.name%> will confirm your order...</div>
       <div class="mt-4 confirmation_item"><i class="far fa-check-circle"></i><%=@store.name%> has confirmed your order... </div>
       <div class="mt-4 confirmation_item"><i class="fas fa-walking"></i>Your order has been marked as collected! </div>
-      <!-- <div class="mt-4 btn btn-primary" id="go-back">Go back to my feed</div> -->
-      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn btn-primary", id: "go-back" %>
-      <div class="mt-4 btn btn-primary hidden">Show this code to owner</div>
+      <div class="confirmation_item hidden " style="margin-top: -20px">We apologise but this store has declined your order. <br> Return to feed for more options.</div>
+      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn btn-full", id: "go-back" %>
     </div>
   </section>
 </div>
