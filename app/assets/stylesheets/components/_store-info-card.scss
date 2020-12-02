@@ -37,6 +37,66 @@
   }
 }
 
+.store-info-container-1 {
+  width: 860px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  box-shadow: 15px 15px 10px rgb(227, 227, 227);
+  font-size: 16px;
+  display: flex;
+  overflow: hidden;
+
+  .empty-image-1 {
+    width: 350px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .store-image-1 {
+    width: 350px;
+    min-height: 100%;
+    background-position: 35% 35%;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .store-info-1 {
+    padding: 20px;
+    min-width: 400px;
+  }
+
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 1240px) {
+  .add-item-btn,
+  .edit-btn {
+    margin-bottom: 10px;
+    width: 150px;
+    margin-left: 210px;
+    position: relative;
+    }
+
+    .store-info-container {
+  width: 665px;
+  }
+    .store-info-container-1 {
+  width: 860px;
+  }
+}
+
+
+
+
+
 .store-info p {
   // overflow: scroll;
   overflow: hidden;
@@ -46,6 +106,15 @@
   max-width: 400px;
 }
 
+
+.store-info-1 p {
+  // overflow: scroll;
+  overflow: hidden;
+   display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 400px;
+}
 
 // Media Queries for grids
 @media(max-width: 1200px) {
@@ -104,3 +173,5 @@
     border-radius: 0;
   }
 }
+
+
