@@ -17,7 +17,6 @@
       <% if current_user.stores.any? %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Store</a>
-
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: #353B48">
           <%= link_to "View My Store","#", class: "dropdown-item"%>
           <%= link_to "Create a New Store", new_store_path, class: "dropdown-item" %>
