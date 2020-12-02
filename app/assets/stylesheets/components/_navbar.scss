@@ -1,11 +1,10 @@
 // /* Navbar section */
-
 .nav-link {
     text-decoration: none;
     color: white;
     font-size: 16px;
     transition: 0.2s;
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .nav-link:hover,
@@ -18,10 +17,21 @@
     transition: 0.2s;
 }
 
+
 #brand-color
 {
   color: #FECD1A;
 }
+
+#green {
+  color: #1EDD88;
+}
+
+#grey {
+  color: #a09b9b;
+}
+
+
 
 .navbar-lewagon {
   position: fixed;
@@ -44,3 +54,68 @@
 .navbar {
   height: 60px;
 }
+
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: #353B48;
+  text-decoration: none;
+  background-color: white !important;
+ }
+
+ .width {
+  width: 425px;
+ }
+
+ .progress {
+  margin-left: auto; margin-right:auto;
+  }
+
+// .navbar-lewagon {
+//   justify-content: space-between!important;
+//   background: #353B48;
+//   overflow: hidden;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 55px;
+//   z-index: 100;
+// }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+
+// #brand-color {
+//   margin-top: 21px;
+// }
+
+// .dropdown-menu{
+//   height: 300px;
+// }
+
+// @media only screen and (max-width: 575px) {
+//   .collapse {
+//    background-color: #353B48;
+//    height: 320px;
+// }
+// }
+
+// #header-img {
+//   height: 40px;
+//   width: 40px;
+//   margin-left: 15px;
+// }
+
+// .dropdown-menu {
+//   height: 360px;
+// }
+

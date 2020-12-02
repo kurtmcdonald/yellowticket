@@ -17,8 +17,9 @@
       <% if current_user.stores.any? %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Store</a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "View My Store", store_path(current_user.stores.first), class: "dropdown-item" %>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: #353B48">
+          <%= link_to "View My Store","#", class: "dropdown-item"%>
           <%= link_to "Create a New Store", new_store_path, class: "dropdown-item" %>
           <%= link_to "All Stores", stores_path, class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
@@ -47,8 +48,24 @@
        <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
        <% end %>
      </li>
-     <li class="nav-item active">
-      <a href="#"><i id="brand-color" class="fas fa-globe-americas nav-link" style="font-size: 20px"></i></a>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i id="brand-color" class="fas fa-globe-americas" style="font-size: 20px"></i></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: #353B48">
+          <div class="width text-center">
+            <p style="color: white">Reducing food waste lowers your carbon foot print</p>
+          </div>
+          <div class="width text-center">
+            <p style="color: white">Earn your 2nd <em id="green">Green World</em> by completing 5 orders</p>
+          </div>
+          <div class="width">
+            <div class="progress" style="width: 90%">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="width text-center">
+            <p><i id="green" class="fas fa-globe-americas nav-link" style="font-size: 30px"></i><i id="grey" class="fas fa-globe-americas nav-link" style="font-size: 30px"></i><i id="grey" class="fas fa-globe-americas nav-link" style="font-size: 30px"></i><i id="grey" class="fas fa-globe-americas nav-link" style="font-size: 30px"></i><i id="grey" class="fas fa-globe-americas nav-link" style="font-size: 30px"></i></p>
+          </div>
+        </div>
     </li>
   </ul>
 </div>
