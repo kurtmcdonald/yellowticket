@@ -15,8 +15,8 @@ puts "Creating Users..."
 User.create(first_name: "boris", last_name: "johnson", email: "boris@test.com", password: "password", owner: true)
 User.create(first_name: "tom", last_name: "cruise", email: "tom@test.com", password: "password", owner: true)
 User.create(first_name: "morgan", last_name: "freeman", email: "morgan@test.com", password: "password", owner: true)
-User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@test.com", password: "password", owner: true)
-User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", password: "password", owner: true)
+User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@test.com", password: "password", owner: false)
+User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", password: "password", owner: false)
 
 addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "61-65 Kensington Church St, Kensington, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
 puts "Creating Stores"
