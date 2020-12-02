@@ -50,7 +50,7 @@
   }
 
   .basket-no-items {
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: space-around;
     align-item: center;
@@ -68,6 +68,14 @@
     display: none;
   }
 }
+
+@media(max-width: 1240px) {
+  .basket-container {
+    top: 135px;
+    right: 5%;
+    }
+}
+
 
 .basket-container-scrolled {
   width: 300px;
@@ -127,10 +135,11 @@
   }
 
   .basket-no-items {
-    margin-top: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     color: #FECD18;
     font-weight: bold;
-    padding: 10px;
+    padding: 4px 12px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -203,4 +212,11 @@
     }
   }
 
+}
+
+@media(max-width: 1240px) {
+  .basket-container-scrolled {
+    top: 65px;
+    right: 5%;
+    }
 }

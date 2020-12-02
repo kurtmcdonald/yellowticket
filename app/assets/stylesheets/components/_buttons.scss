@@ -68,9 +68,8 @@
 
 .add-to-basket-btn {
   padding: 7px 20px;
-  background-color: #495365;
+  background-color: #FECD1A;
   border-radius: 0 0 10px 10px;
-  text-decoration: none;
   width: 100%;
   margin-top: 10px;
   display: flex;
@@ -78,10 +77,17 @@
   justify-content: space-around;
   position: absolute;
   bottom: 0px;
+  font-weight: 500;
   a {
-    color: white;
-    font-weight: bold;
+    color: #353B48 ;
+    text-decoration: none;
   }
+}
+
+.add-to-basket-btn:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #353B48;
 }
 
 // Add-to-basket-btn media query
@@ -104,10 +110,10 @@
 
 @media only screen and (max-width: 429px) {
   .btn-app {
-  height: 30px;
-  width: auto;
-  margin-right: 5px;
-}
+    height: 30px;
+    width: auto;
+    margin-right: 5px;
+  }
 }
 
 .btn-app:link,
@@ -147,26 +153,38 @@
   text-decoration: none;
   color: white;
 }
+
+@media(max-width: 1240px) {
+  .add-item-btn,
+  .edit-btn {
+    margin-bottom: 10px;
+    width: 150px;
+    margin-left: 210px;
+    position: relative;
+    }
+
+}
 /*--------------------------------------*/
 /* ADD TO BASKET BUTTON ON INDEX/SHOW PAGE*/
 /*--------------------------------------*/
 
 .btn-basket {
   padding: 5px 10px;
-  margin-left: 50px;
-  line-height: 50px;
+  margin-left: 0px;
+  width: 100%;
+  line-height: 25px;
   font-weight: 500;
   font-size: 15px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 0  0 5px 5px;
   background-color: #FECD1A;
-  border: 1px solid #FECD1A;
   color: #353B48;
   transition: 0.3s;
+  text-align: center;
 }
 
 .btn-basket:hover,
-.btn-basket:active, {
+.btn-basket:active {
   text-decoration: none;
   font-weight: bold;
   color: #353B48;
@@ -324,4 +342,60 @@
   -moz-animation: reject 1500ms infinite;
   -o-animation: reject 1500ms infinite;
   animation: reject 1500ms infinite;
+}
+
+.btn-form-back {
+  color: #FECD1A;
+  background-color: #353B48;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  margin-left: 8px;
+  box-shadow: 2px 1px #767676;
+  transition: 0.3s;
+
+}
+
+.btn-form-back:hover,
+.btn-form-back:active
+{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-back-1:link,
+.btn-back-1:visited,
+{
+  display: inline-block;
+  padding: 6px 18px;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn-back-1:link,
+.btn-back-1:visited,
+{
+  background-color: #353B48;
+  border: 1px solid #353B48;
+  color: #FECD1A;
+  margin-right: 15px;
+}
+
+.btn-back-1:hover,
+.btn-back-1:active,
+{
+  border: 1px solid #495365;
+  background-color: #495365;
+}
+
+.active_order_link {
+  position: absolute;
+  z-index: 0.9;
+  top: 60px;
+  right: 0px;
+  width: auto;
+  border-radius: 0;
 }
