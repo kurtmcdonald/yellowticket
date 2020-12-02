@@ -20,12 +20,16 @@ User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", p
 
 addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "61-65 Kensington Church St, Kensington, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
 puts "Creating Stores"
-Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast")
-Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second, tag_list: "Breakfast")
-Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
-Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
-Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: Faker::Restaurant.description, user: User.find_by(first_name: "alfie"), tag_list: "Breakfast")
-
+boris = Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast")
+boris.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'bakery.jpg')), filename: 'bakery.jpg', content_type: 'image/jpg')
+tom = Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second, tag_list: "Breakfast")
+tom.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'tom.jpg')), filename: 'tom.jpg', content_type: 'image/jpg')
+morgan = Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
+morgan.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'morgan.jpg')), filename: 'morgan.jpg', content_type: 'image/jpg')
+kurt = Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
+kurt.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'kurt.jpg')), filename: 'kurt.jpg', content_type: 'image/jpg')
+alfie = Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: Faker::Restaurant.description, user: User.find_by(first_name: "alfie"), tag_list: "Breakfast")
+alfie.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'alfie.jpg')), filename: 'alfie.jpg', content_type: 'image/jpg')
 # Store.all.each do |store|
 #   puts "Adding items to store"
 #   6.times do
