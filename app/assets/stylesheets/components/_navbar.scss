@@ -1,11 +1,10 @@
 // /* Navbar section */
-
 .nav-link {
     text-decoration: none;
     color: white;
     font-size: 16px;
     transition: 0.2s;
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .nav-link:hover,
@@ -18,10 +17,21 @@
     transition: 0.2s;
 }
 
+
 #brand-color
 {
   color: #FECD1A;
 }
+
+#green {
+  color: #1EDD88;
+}
+
+#grey {
+  color: #a09b9b;
+}
+
+
 
 .navbar-lewagon {
   position: fixed;
@@ -45,6 +55,23 @@
   height: 60px;
 }
 
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: #353B48;
+  text-decoration: none;
+  background-color: white !important;
+ }
+
+ .width {
+  width: 425px;
+ }
+
+ .progress {
+  margin-left: auto; margin-right:auto;
+  }
 
 // .navbar-lewagon {
 //   justify-content: space-between!important;
