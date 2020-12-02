@@ -43,6 +43,18 @@
   width: 350px;
   margin: 10px auto;
   padding: 10px;
+
+  .old-price {
+    text-decoration: line-through;
+  }
+}
+
+.basket-total {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.confirmation-basket-item {
+  display: flex;
+  justify-content: space-between;
 }
