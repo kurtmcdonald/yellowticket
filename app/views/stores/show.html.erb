@@ -22,7 +22,17 @@
   <% flash.each do |type, msg| %>
   <div class="p-3 m-2 alert-danger my-alert">
     <span><%= msg %></span>
-    <span>Go back to: <%= link_to "#{@orders.last.item.store.name}", store_path(@orders.last.item.store), class: ".alert-link"%></span>
+    <% if @orders.empty? %>
+      <!-- This means there are no pending orders -->
+      <% if current_user.orders.checkout.any? %>
+        <% store = current_user.orders.checkout.first.store %>
+      <% elsif current_user.orders.accepted.any? %>
+        <% store = current_user.orders.accepted.first.store %>
+      <% end %>
+      <span><%= link_to "Back to confirmation page", confirmation_store_path(store), class: ".alert-link"%></span>
+    <% else %>
+      <span>Go back to: <%= link_to "#{@orders.last.item.store.name}", store_path(@orders.last.item.store), class: ".alert-link"%></span>
+    <% end %>
   </div>
   <% end %>
   <div class="show-items-grid">
