@@ -6,7 +6,7 @@
   margin: 15px;
   font-size: 16px;
   position: fixed;
-  top: 120px;
+  top: 135px;
   right: 11%;
   z-index: 1;
 
@@ -69,13 +69,26 @@
   }
 }
 
+@media(min-width: 2000px) {
+  .basket-container {
+    top: 135px;
+    right: 11%;
+  }
+}
+
+@media(max-width: 1400px) {
+  .basket-container {
+    top: 135px;
+    right: 5%;
+  }
+}
+
 @media(max-width: 1240px) {
   .basket-container {
     top: 135px;
     right: 5%;
     }
 }
-
 
 .basket-container-scrolled {
   width: 300px;
@@ -212,6 +225,20 @@
     }
   }
 
+}
+
+@media(max-width: 2000px) {
+  .basket-container-scrolled {
+    top: 65px;
+    right: 11%;
+    }
+}
+
+@media(max-width: 1400px) {
+  .basket-container-scrolled {
+    top: 65px;
+    right: 5%;
+    }
 }
 
 @media(max-width: 1240px) {

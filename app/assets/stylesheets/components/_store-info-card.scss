@@ -97,11 +97,25 @@
   }
 }
 
+@media(max-width: 2000px) {
+  .store-info-container {
+    width: 765px;
+
+    .store-image {
+      width: 300px;
+    }
+  }
 
 .see-all-tag a:hover {
   text-decoration: none!important;
 }
 
+  .store-info-container-1 {
+    .store-image {
+      width: 320px;
+    }
+  }
+}
 
 .store-info p {
   // overflow: scroll;
@@ -111,7 +125,6 @@
   -webkit-box-orient: vertical;
   max-width: 400px;
 }
-
 
 .store-info-1 p {
   // overflow: scroll;

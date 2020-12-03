@@ -24,6 +24,18 @@
   width: 300px;
 }
 
+@media(max-width: 2000px) {
+  .edit-add-box {
+    right: 14%
+  }
+}
+
+@media(max-width: 1400px) {
+  .edit-add-box {
+    right: 11%
+  }
+}
+
 .my-alert {
   border-radius: 10px;
   margin-left: 20px;
