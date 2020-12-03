@@ -19,7 +19,6 @@
 
 <div class="confirmation-btn-container">
 
-  <!-- <div class="btn btn-primary m-2 text-center" type="button" data-toggle="modal" data-target="#showBasketModal"> Show Basket </div> -->
   <div class="modal fade" id="showBasketModal" tabindex="-1" role="dialog" aria-labelledby="showBasketModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -31,29 +30,33 @@
         </div>
         <div class="modal-body">
           <div class="confirmation-basket">
-            <% sum = 0 %>
-            <% discounted_sum = 0 %>
-            <% @orders.each do |order| %>
-              <div class="confirmation-basket-item">
-                <div><%= order.item.name %> x<%= order.quantity %></div>
-                <div>
-                  <span class="old-price"><%= number_to_currency(order.item.price * order.quantity, unit: "£")%></span>
-                  <i class="fas fa-arrow-right"></i>
-                  <span><%= number_to_currency(order.item.discounted_price * order.quantity, unit: "£")%></span>
+            <% if @orders.empty? %>
+              <div class="m-3 p-3 text-center">All of your orders have been collected!</div>
+            <% else %>
+              <% sum = 0 %>
+              <% discounted_sum = 0 %>
+              <% @orders.each do |order| %>
+                <div class="confirmation-basket-item">
+                  <div><%= order.item.name %> x<%= order.quantity %></div>
+                  <div>
+                    <span class="old-price"><%= number_to_currency(order.item.price * order.quantity, unit: "£")%></span>
+                    <i class="fas fa-arrow-right"></i>
+                    <span><%= number_to_currency(order.item.discounted_price * order.quantity, unit: "£")%></span>
+                  </div>
+                  <% sum += order.item.price * order.quantity %>
+                  <% discounted_sum += order.item.discounted_price * order.quantity%>
                 </div>
-                <% sum += order.item.price * order.quantity %>
-                <% discounted_sum += order.item.discounted_price * order.quantity%>
+              <% end %>
+              <hr>
+              <div class="basket-total">
+                <div class="total">Total:</div>
+                <div class="price">
+                  <span class="old-price"><%= number_to_currency(sum, unit: "£") %></span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
+                </div>
               </div>
             <% end %>
-            <hr>
-            <div class="basket-total">
-              <div class="total">Total:</div>
-              <div class="price">
-                <span class="old-price"><%= number_to_currency(sum, unit: "£") %></span>
-                <i class="fas fa-arrow-right"></i>
-                <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
