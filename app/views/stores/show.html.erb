@@ -36,7 +36,7 @@
   </div>
   <% end %>
   <div class="show-items-grid">
-    <% @store.items.order(:discounted_price).each do |item| %>
+    <% @store.items.order(:name).each do |item| %>
     <div class="item-card" id="item-<%= item.id %>">
       <% if item.photo.attached? %>
       <div class="item-img" style="background-image: url('<%= cl_image_path item.photo.key, height: 100, width: 100 %>')"></div>

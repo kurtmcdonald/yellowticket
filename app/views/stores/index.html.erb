@@ -37,7 +37,7 @@
     <p class="store-address"> <%= store.address %> </p></div>
   <div class="card-product background-shade">
     <div class="store-items">
-       <% store.items.each do |item| %>
+       <% store.items.order(:discounted_price).each do |item| %>
           <div class="card-item">
             <% if item.discounted_price == 0 %>
             <div >
