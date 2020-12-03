@@ -23,12 +23,14 @@ const find_status = () => {
             confirmation_scroll(1);
             scroll_container.children[0].classList.remove('active');
             scroll_container.children[1].classList.add('active');
+            document.getElementById("your-item-collected").style.display = "inline-block";
           } else if (data.status === "collected") {
             confirmation_scroll(2);
             scroll_container.children[0].classList.remove('active');
             scroll_container.children[1].classList.remove('active');
             scroll_container.children[2].classList.add('active');
             scroll_container.children[4].style.display = "inline-block";
+            document.getElementById("your-item-collected").style.display = "none";
           } else if (data.status === "rejected") {
             scroll_container.children[0].style.display = "none";
             scroll_container.children[1].style.display = "none";

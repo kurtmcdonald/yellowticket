@@ -7,7 +7,11 @@
   <section id="display">
     <div id="container">
       <div class="mt-4 confirmation_item active"><span class="mr-3"><i class="far fa-clock"></i></span><%=@store.name%> will confirm your order...</div>
-      <div class="mt-4 confirmation_item"><span class="mr-3"><i class="far fa-check-circle"></i></span><%=@store.name%> has confirmed your order... </div>
+      <div class="mt-4 confirmation_item">
+        <span class="mr-3"><i class="far fa-check-circle"></i></span>
+        <%=@store.name%> has confirmed your order! <br>
+        <span style="font-size: 16px; display: none; color: #C6C4C4;" id="your-item-collected">Your items have been reserved and are ready to be collected!</span>
+      </div>
       <div class="mt-4 confirmation_item"><span class="mr-3"><i class="fas fa-walking"></i></span>Your order has been marked as collected! </div>
       <div class="confirmation_item hidden " style="margin-top: -20px">We apologise but this store has declined your order. <br> Return to feed for more options.</div>
       <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn-confirmation-feed", id: "go-back" %>
