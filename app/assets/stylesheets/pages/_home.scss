@@ -20,7 +20,7 @@ html {
   text-align: right;
   padding-right: 25px;
   margin-top: 30px;
-  margin-left: -195px;
+  margin-left: -125px;
 }
 
 
@@ -31,6 +31,7 @@ html {
 
 .app-screen {
   width: 16%;
+  margin-right: 150px
 }
 
 @media only screen and (max-width: 479px) {
@@ -113,7 +114,7 @@ html {
 .statement-header {
   margin-top: 40px;
   word-spacing: 2px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
   letter-spacing: 1px;
   color: black;
@@ -232,7 +233,8 @@ html {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
+  padding: 5px;
 }
  .row {
   width: 100%;
