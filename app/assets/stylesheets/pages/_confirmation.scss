@@ -26,7 +26,7 @@
   }
 
   .active {
-    color: orange;
+    color: #FECD1A;
     font-size: 30px;
   }
 
@@ -37,4 +37,24 @@
 
 .hidden {
   display: none;
+}
+
+.confirmation-btn-container {
+  width: 350px;
+  margin: 10px auto;
+  padding: 10px;
+
+  .old-price {
+    text-decoration: line-through;
+  }
+}
+
+.basket-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmation-basket-item {
+  display: flex;
+  justify-content: space-between;
 }

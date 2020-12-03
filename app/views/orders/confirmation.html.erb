@@ -1,19 +1,66 @@
 <br>
 <br>
 
+<div class="mt-4 confirmation-model-btn" data-toggle="modal" data-target="#showBasketModal"> <i class="fas fa-shopping-basket"></i></div>
+
 <div class="test_scroll">
   <section id="display">
     <div id="container">
-      <div class="mt-4 confirmation_item active"><i class="far fa-clock"></i><%=@store.name%> will confirm your order...</div>
-      <div class="mt-4 confirmation_item"><i class="far fa-check-circle"></i><%=@store.name%> has confirmed your order... </div>
-      <div class="mt-4 confirmation_item"><i class="fas fa-walking"></i>Your order has been marked as collected! </div>
+      <div class="mt-4 confirmation_item active"><span class="mr-3"><i class="far fa-clock"></i></span><%=@store.name%> will confirm your order...</div>
+      <div class="mt-4 confirmation_item"><span class="mr-3"><i class="far fa-check-circle"></i></span><%=@store.name%> has confirmed your order... </div>
+      <div class="mt-4 confirmation_item"><span class="mr-3"><i class="fas fa-walking"></i></span>Your order has been marked as collected! </div>
       <div class="confirmation_item hidden " style="margin-top: -20px">We apologise but this store has declined your order. <br> Return to feed for more options.</div>
-      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn btn-full", id: "go-back" %>
+      <%= link_to "Go back to my feed", stores_path, class: "mt-4 btn-confirmation-feed", id: "go-back" %>
     </div>
   </section>
 </div>
 
-<div class="p-3" style="background-color: #353B48"></div>
+<div class="p-3" style="background-color: #353B48">
+
+<div class="confirmation-btn-container">
+
+  <!-- <div class="btn btn-primary m-2 text-center" type="button" data-toggle="modal" data-target="#showBasketModal"> Show Basket </div> -->
+  <div class="modal fade" id="showBasketModal" tabindex="-1" role="dialog" aria-labelledby="showBasketModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="showBasketModalLabel">Your Basket</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="confirmation-basket">
+            <% sum = 0 %>
+            <% discounted_sum = 0 %>
+            <% @orders.each do |order| %>
+              <div class="confirmation-basket-item">
+                <div><%= order.item.name %> x<%= order.quantity %></div>
+                <div>
+                  <span class="old-price"><%= number_to_currency(order.item.price * order.quantity, unit: "£")%></span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span><%= number_to_currency(order.item.discounted_price * order.quantity, unit: "£")%></span>
+                </div>
+                <% sum += order.item.price * order.quantity %>
+                <% discounted_sum += order.item.discounted_price * order.quantity%>
+              </div>
+            <% end %>
+            <hr>
+            <div class="basket-total">
+              <div class="total">Total:</div>
+              <div class="price">
+                <span class="old-price"><%= number_to_currency(sum, unit: "£") %></span>
+                <i class="fas fa-arrow-right"></i>
+                <span><%= number_to_currency(discounted_sum, unit: "£") %></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 <div class="container">
   <div id="map"
@@ -21,17 +68,5 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
-  <div class="col mt-5 hidden">
-    <%= RQRCode::QRCode.new(root_path).as_svg(
-      offset: 0,
-      color: '000',
-      shape_rendering: 'crispEdges',
-      module_size: 6,
-      standalone: true
-    ).html_safe %>
-  </div>
 </div>
-
-
 

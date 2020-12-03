@@ -25,7 +25,7 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 
-import { find_status, test_scroll } from '../plugins/confirmation_page';
+import { find_status, hideActiveOrder } from '../plugins/confirmation_page';
 import { toggleSpinner} from './spinner';
 import { edit_item } from '../plugins/edit_item';
 
@@ -36,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   find_status();
+  hideActiveOrder();
   toggleSpinner();
 })
 

@@ -299,6 +299,8 @@
 
 .edit-item-submit {
   border-radius: 0 0 10px 10px;
+  background-color: #353B48;
+  color: #FECD1A;
 }
 
 @keyframes pulsate {
@@ -398,4 +400,26 @@
   right: 0px;
   width: auto;
   border-radius: 0;
+}
+
+.confirmation-model-btn {
+  width: fit-content;
+  background-color: #FECD1A;
+  border: 1px solid #353B48;
+  color: #353B48;
+  font-size: 25px;
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  z-index: 5;
+  padding: 8px 13px;;
+  border-radius: 50%;
+}
+
+.btn-confirmation-feed {
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #FECD1A;
+  color: #353B48;
+  font-weight: bold;
 }
