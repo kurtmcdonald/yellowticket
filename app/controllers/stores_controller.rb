@@ -73,14 +73,6 @@ class StoresController < ApplicationController
       .where(orders: { status: 'checkout', collected: false, items: { store: Store.find(params[:id]) } }).uniq
   end
 
-  # def tagged
-  #   if params[:tag].present?
-  #     @stores = Store.tagged_with(params[:tag])
-  #   else
-  #     @stores = Store.all
-  #   end
-  # end
-
   private
 
   def current_orders
