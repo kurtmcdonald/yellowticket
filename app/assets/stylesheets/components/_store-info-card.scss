@@ -76,6 +76,10 @@
   }
 }
 
+#index-header {
+  text-align: left;
+}
+
 @media(max-width: 1240px) {
   .add-item-btn,
   .edit-btn {
@@ -102,14 +106,16 @@
     }
   }
 
+.see-all-tag a:hover {
+  text-decoration: none!important;
+}
+
   .store-info-container-1 {
     .store-image {
       width: 320px;
     }
   }
 }
-
-
 
 .store-info p {
   // overflow: scroll;
@@ -119,7 +125,6 @@
   -webkit-box-orient: vertical;
   max-width: 400px;
 }
-
 
 .store-info-1 p {
   // overflow: scroll;
