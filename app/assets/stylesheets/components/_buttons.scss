@@ -416,10 +416,22 @@
   border-radius: 50%;
 }
 
+.confirmation-model-btn:hover,
+.confirmation-model-btn:active {
+  opacity: 0.8;
+}
+
 .btn-confirmation-feed {
   padding:5px 15px;
   border-radius: 7px;
   background-color: #FECD1A;
   color: #353B48;
   font-weight: bold;
+}
+
+.btn-confirmation-feed:hover,
+.btn-confirmation-feed:active {
+  text-decoration: none;
+  opacity: 0.8;
+  color: #353B48;
 }
