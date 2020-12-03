@@ -3,6 +3,7 @@ class StoresController < ApplicationController
 
   def index
     @tags = Store.all.map { |store| store.tag_list }.flatten.uniq
+    console
     if params[:query].present?
       @stores = Store.search_field(params[:query])
     elsif params[:tag].present?
