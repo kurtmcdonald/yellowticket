@@ -69,20 +69,6 @@
   }
 }
 
-@media(max-width: 1240px) {
-  .basket-container {
-    top: 135px;
-    right: 5%;
-    }
-}
-
-@media(max-width: 1400px) {
-  .basket-container {
-    top: 135px;
-    right: 6%;
-  }
-}
-
 @media(min-width: 2000px) {
   .basket-container {
     top: 135px;
@@ -90,6 +76,19 @@
   }
 }
 
+@media(max-width: 1400px) {
+  .basket-container {
+    top: 135px;
+    right: 5%;
+  }
+}
+
+@media(max-width: 1240px) {
+  .basket-container {
+    top: 135px;
+    right: 5%;
+    }
+}
 
 .basket-container-scrolled {
   width: 300px;
