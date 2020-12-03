@@ -22,6 +22,7 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+import $ from "jquery";
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 
@@ -30,6 +31,9 @@ import { toggleSpinner} from './spinner';
 import { edit_item } from '../plugins/edit_item';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
+
+window.$ = $
+global.$ = $
 
 document.addEventListener('turbolinks:load', () => {
   edit_item();
