@@ -12,23 +12,23 @@ puts "Destroying All"
 User.destroy_all
 
 puts "Creating Users..."
-User.create(first_name: "boris", last_name: "johnson", email: "boris@test.com", password: "password", owner: true)
-User.create(first_name: "tom", last_name: "cruise", email: "tom@test.com", password: "password", owner: true)
-User.create(first_name: "morgan", last_name: "freeman", email: "morgan@test.com", password: "password", owner: true)
-User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@test.com", password: "password", owner: false)
-User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@test.com", password: "password", owner: false)
+User.create(first_name: "boris", last_name: "johnson", email: "boris@mail.com", password: "password", owner: true)
+User.create(first_name: "tom", last_name: "cruise", email: "tom@mail.com", password: "password", owner: true)
+User.create(first_name: "morgan", last_name: "freeman", email: "morgan@mail.com", password: "password", owner: true)
+User.create(first_name: "alfie", last_name: "hiscox", email: "alfie@mail.com", password: "password", owner: true)
+User.create(first_name: "kurt", last_name: "mcdonald", email: "kurt@mail.com", password: "password", owner: true)
 
-addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "61-65 Kensington Church St, Kensington, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
+addresses = ["1 Snowden Street, London", "50-52 Old Brompton Rd, South Kensington, London", "195 Hackney Rd, Hackney, London", "112/118 Kingsland Rd, Hackney, London", "17B Kingsland Rd, Hackney, London",]
 puts "Creating Stores"
-boris = Store.create(address: addresses[1], name: "Boris's Bakery", description: Faker::Restaurant.description, user: User.first, tag_list: "Breakfast")
+boris = Store.create(address: addresses[1], name: "Boris's Bakery", description: 'Boris Bakery is an American-style pastry kitchen established in 2004 to bring the bona fide taste of American home eating to London.', user: User.first, tag_list: "Breakfast")
 boris.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'bakery.jpg')), filename: 'bakery.jpg', content_type: 'image/jpg')
-tom = Store.create(address: addresses[2], name: "Tom's Kitchen", description: Faker::Restaurant.description, user: User.second, tag_list: "Breakfast")
+tom = Store.create(address: addresses[2], name: "Tom's Kitchen", description: 'Set in a townhouse on the former site of The Blenheim pub, Tom’s Kitchen Hackney serves comfort food favourites and seasonal specials in a relaxed and informal environment, from breakfast to dinner.', user: User.second, tag_list: ["Breakfast", "Lunch", "Dinner"])
 tom.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'tom.jpg')), filename: 'tom.jpg', content_type: 'image/jpg')
-morgan = Store.create(address: addresses[3], name: "Club Morgan", description: Faker::Restaurant.description, user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
+morgan = Store.create(address: addresses[3], name: "Club Morgan", description: 'Toms kitchen provides an exceptional dining experience that satisfies our guests’ grown-up tastes by being a Cut-Above in everything we do.', user: User.find_by(first_name: "morgan"), tag_list: ["Lunch", "Dinner"])
 morgan.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'morgan.jpg')), filename: 'morgan.jpg', content_type: 'image/jpg')
-kurt = Store.create(address: addresses[4], name: "Kurts Grocery Store", description: Faker::Restaurant.description, user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
+kurt = Store.create(address: addresses[4], name: "Mac’s Grocery Store", description: 'Mac''s grocery store is a family run business which opened in 1965 and has been serving the local community with the greatest fresh produce anyone could ask for.', user: User.last, tag_list: ["Breakfast", "Lunch", "Dinner"])
 kurt.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'kurt.jpg')), filename: 'kurt.jpg', content_type: 'image/jpg')
-alfie = Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: Faker::Restaurant.description, user: User.find_by(first_name: "alfie"), tag_list: "Breakfast")
+alfie = Store.create(address: addresses[0], name: "Alfie's Breakfast Cafe", description: 'A warm and welcoming cafe in the heart of Hackney serving breakfast all day, 7 days a week.', user: User.find_by(first_name: "alfie"), tag_list: "Breakfast")
 alfie.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'alfie.jpg')), filename: 'alfie.jpg', content_type: 'image/jpg')
 # Store.all.each do |store|
 #   puts "Adding items to store"
