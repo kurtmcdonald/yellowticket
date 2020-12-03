@@ -93,7 +93,21 @@
   }
 }
 
+@media(max-width: 2000px) {
+  .store-info-container {
+    width: 765px;
 
+    .store-image {
+      width: 300px;
+    }
+  }
+
+  .store-info-container-1 {
+    .store-image {
+      width: 320px;
+    }
+  }
+}
 
 
 
