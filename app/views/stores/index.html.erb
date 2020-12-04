@@ -12,15 +12,15 @@
   <div class="store-cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/delicious-fluffy-pancake-frying-pan-fresh-fruit-honey-toppings-white-background_281653-997.jpg)">
      <h3 class="suggestion-text"></h3>
-     <%= link_to "Breakfast", stores_path(tag: @tags.last), class: "suggestion-text" %>
+     <%= link_to "Breakfast", stores_path(tag: @tags.first), class: "suggestion-text" %>
     </div>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/delicious-ramen-soup-background_52683-46005.jpg)">
      <h3 class="suggestion-text"></h3>
-     <%= link_to "Lunch", stores_path(tag: @tags.first), class: "suggestion-text" %>
+     <%= link_to "Lunch", stores_path(tag: @tags.second), class: "suggestion-text" %>
     </div>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(https://image.freepik.com/free-vector/realistic-kitchen-ware-top-view-with-salmon-spices-vegetables-wooden-texture-illustration_1284-28232.jpg)">
       <h3 class="suggestion-text"></h3>
-      <%= link_to "Dinner", stores_path(tag: @tags.second), class: "suggestion-text" %>
+      <%= link_to "Dinner", stores_path(tag: @tags.last), class: "suggestion-text" %>
     </div>
   </div>
 </div>
